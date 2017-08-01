@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>David Schaich -- Bern Physics</title>
+<link rel="stylesheet" media="all" title="Basic style" href="../basic.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="main">
+<a href="../index.html">Main</a> / <a href="index.html">Research</a> / <b>algorithms</b>
+
+<h3>Research &mdash; Algorithm development</h3>
+
+<table>
+  <tr>
+    <td class="image"><img class="full" src="algorithms.png" alt="Algorithms image"></td>
+    <td class="spacer"></td>
+    <td class="content">
+      <b>Image:</b> From <a href="https://arxiv.org/abs/1403.2761">arXiv:1403.2761</a>, correlated predictions for the topological susceptibility and (inverse) auto-correlations of lattice QCD calculations, resulting from novel maximum-likelihood analyses of transitions between topological sectors.<br><br>
+      <b>Related publications:</b> <a href="https://arxiv.org/abs/1403.2761">arXiv:1403.2761</a>, <a href="https://arxiv.org/abs/0906.2813">arXiv:0906.2813</a>, <a href="https://arxiv.org/abs/0902.0045">arXiv:0902.0045</a>, <a href="http://inspirehep.net/record/1386200">Bachelor thesis</a>
+    </td>
+  </tr>
+</table>
+
+<br><hr><br>
+
+<p class="indent">The discussion of this project is currently being updated during August 2017.</p>
+
+<p class="indent">My research is only possible thanks to steady advances in numerical algorithms complementing improvements in computing hardware, and this work will become even more important in the future.</p>
+
+<p class="indent">A basic ingredient of lattice calculations is repeated solution of a linear system, <em>Ax=b</em>, where <em>A</em> is a large sparse matrix known as the Dirac operator.  By "large", I mean that this matrix formally has millions of rows and millions of columns.  Even though the matrix is sparse (most entries are zero), this is far too much data to store in a computer's memory.  We use iterative techniques such as the conjugate gradient algorithm to solve this equation for <em>x</em> without explicitly writing down the full matrix <em>A</em>.  It is this iterative calculation that must be performed repeatedly to evaluate the quark-line disconnected diagrams mentioned above.</p>
+
+<p class="indent">In recent years, calculations involving disconnected diagrams have benefited greatly from the development and application of multigrid algorithms that dramatically decrease the computational cost of each solve.  Multigrid algorithms represent the physical system on a succession of coarser grids with smaller systems to solve, adaptively determining the best representation of the system on the coarser levels.  Applied to the studies reported in <a href="http://arxiv.org/abs/1012.0562">arXiv:1012.0562</a>, multigrid algorithms can reduce costs by up to an order of magnitude, which made possible a new direction of research: performing disconnected diagrams calculations that involve the light (up and down) quarks in addition to strange quarks.</p>
+
+<p class="indent">On the hardware side, graphics processing units (GPUs) have produced comparable performance improvements in certain calculations.  GPUs can sustain enormous rates of computation, but memory and bandwidth constraints make it difficult to apply GPU computing to many common problems.  These sorts of difficulties will likely become more severe as high-performance computing continues to evolve in coming years.  Cheap and rapidly improving GPUs can be an ideal testbed for developing software that will get the most out of future computers.</p>
+
+<p class="indent">In addition to working on projects that apply GPU computing and multigrid algorithms to reduce computational burdens, I have also performed research into the development of other improved algorithms [<a href="http://arxiv.org/abs/0906.2813">arXiv:0906.2813</a>], though this work is a bit too specialized to discuss in detail here.  A final interesting aspect of this line of research is that it can provide an entry point into the field.  We often use simple models to design and test improved techniques.  These smaller-scale computational projects can be more tractable for beginners, while still providing significant benefits to the field as a whole.</p>
+
+<br><hr>
+
+<p class="left">Last modified 1 August 2017</p>
+
+<p class="right">
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
+  <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.davidschaich.net/basic.css"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS"></a><br>
+  <a href="http://www.fsf.org/register_form?referrer=8412"><img src="../images/fsf.png" alt="Free Software Foundation"></a>
+</p>
+</div>
+</body>
+</html>

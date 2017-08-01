@@ -1,0 +1,122 @@
+/* CSS Document */
+body {
+  background: black;
+}
+
+#main {
+  position: absolute;
+  width: 80%;
+  background: white;
+  left: 10%;
+  top: 25px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+/*  color: #888;*/
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #f00;
+}
+
+a.title {
+  text-decoration: none;
+  color: #000000;
+  font-style: italic;
+}
+
+a.title:hover {
+  text-decoration:underline;
+  color: #ff0000;
+  font-style: italic;
+}
+
+a.book {
+  text-decoration: none;
+  color: #888;
+  font-weight: bold;
+}
+
+a.book:hover {
+  text-decoration:underline;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+table {
+  margin-left: 3%;
+}
+
+td.image {
+  width: 20%;
+}
+td.spacer {
+  width: 5%;
+}
+td.content {
+  width: 75%;
+}
+
+ol {
+  font: italic 1em Georgia, Times, serif;
+  color: #999;
+}
+
+ol p {
+  font: normal 1em Georgia, Times, serif;
+  color: #000;
+}
+
+.indent {
+  margin-left: 3%;
+  margin-top: 5px;
+}
+
+.left {
+  float: left;
+  margin-left: 3%;
+}
+
+.right {
+  float: right;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#license {
+  float:left;
+}
+
+#valid {
+  float:right;
+}
+
+hr {
+  width: 50%;
+}
+
+img {
+  border: 0;
+}
+
+img.full {
+  width: 100%;
+}
+
+img.right {
+  border: 0;
+  height: 31px;
+  width: 88px;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

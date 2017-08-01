@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>David Schaich -- Bern Physics</title>
+<link rel="stylesheet" media="all" title="Basic style" href="../basic.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="main">
+<a href="../index.html">Main</a> / <a href="index.html">Research</a> / <b>background</b>
+
+<h3>Research &mdash; Background: Strong dynamics and lattice gauge theory</h3>
+
+<table>
+  <tr>
+    <td class="image"><img class="full" src="lattice.png" alt="Lattice"></td>
+    <td class="spacer"></td>
+    <td class="content">
+      <b>Summary:</b> The essence of my research is to use high-performance computing to gain insight into strongly interacting quantum field theories, through a framework known as lattice gauge theory.  Here I provide some non-technical background on strong dynamics and lattice gauge theory.<br><br>
+      <b>Image:</b> A snapshot, produced by Claudio Rebbi, of a quantum field configuration containing a proton in a discretized lattice space-time.  The snapshot shows the three spatial dimensions of the lattice at a particular time.  The colors represent the "color" charges of quarks governed by the theory of quantum chromodynamics and the size of each sphere shows the magnitude of the color field at the corresponding point in space.<br>
+    </td>
+  </tr>
+</table>
+
+<br><hr><br>
+
+<p class="indent"><b>Quantum field theory</b> (QFT) is a fundamental principle that underlies much of modern particle, nuclear and condensed-matter physics.  I can't explain QFT in a quick, non-technical way.  I had to take multiple graduate courses on the subject in order to earn my PhD, and I still learn more about QFT every day as I work on the <a href="https://arxiv.org/list/hep-lat/recent">cutting edge</a> of physics research.  I can, however, summarize some pertinent information.  To learn more about QFT (and many other subjects) <a href="https://en.wikipedia.org/wiki/Quantum_field_theory">Wikipedia</a> is a good place to start&mdash;but a terrible place to stop.</p>
+
+<p class="indent">Qualitatively, QFT is what we get upon combining quantum mechanics with special relativity.  The quantum mechanics part of the recipe allows systems with the same characteristics (the same <em>quantum numbers</em>) to transform into one another, or even coexist as an unresolved superposition.  Special relativity, through its famous formula <em>E = mc<sup>2</sup></em>, allows various forms of energy (e.g., kinetic energy and "potential energy") to be transformed into mass and vice versa.  Relativity also connects space and time, combining them into a single 3+1-dimensional space-time.  In the end QFT describes relativistic quantum fields filling every point in space-time.  Particles correspond to <a href="https://profmattstrassler.com/articles-and-posts/the-higgs-particle/the-higgs-faq-2-0/">ripples in these quantum fields</a>.  In addition, the quantum fields also fluctuate in <a href="https://profmattstrassler.com/articles-and-posts/particle-physics-basics/virtual-particles-what-are-they/">more general ways</a> that don't behave like particles.</p>
+
+<p class="indent">A certain class of QFTs known as <b>gauge theories</b> are particularly important.  For example, the standard model of particle physics is a gauge theory, as is the more familiar electromagnetism that it contains.  The <a href="https://en.wikipedia.org/wiki/Introduction_to_gauge_theory">terminology</a> refers to a feature of these theories that allows the fields to be transformed into different "gauges" at each point of space-time without changing any physical predictions.</p>
+
+<p class="indent">While this brief introduction is obviously very fuzzy, the mathematics of QFT is not.  <a href="https://en.wikipedia.org/wiki/Anomalous_magnetic_dipole_moment#Electron">Extraordinarily precise physical predictions</a> result from QFT calculations, which involve <a href="https://en.wikipedia.org/wiki/Integral">integrating</a> over all possible values of all relevant fields at every space-time point.  Since space-time appears to be continuous, with infinitely many distinguishable times and locations, we end up having to compute <em>infinite-dimensional integrals</em>, where the mathematical "dimensions" of the integral correspond to the independent degrees of freedom in the system (as opposed to the 3+1 dimensions of space-time).  This is difficult.</p>
+
+<p class="indent">The simplest QFT analyses follow an approach known as perturbation theory.  This is a procedure that begins by considering simple systems in which the quantum fields don't interact with each other at all.  It then attempts to incorporate the effects of interactions by treating them as small corrections to the simple starting system.  This works when those interactions are weak in strength.</p>
+
+<p class="indent">Things can become much more difficult when <b>strong interactions</b> are involved.  The most familiar strongly interacting QFT is quantum chromodynamics (QCD), the "color" theory of the strong nuclear force that binds quarks and gluons into composite particles such as protons.  To understand why we say this interaction is "strong", imagine pulling apart two quarks: separating them by a femtometer (10<sup>-15</sup> m, one millionth of a nanometer) would require a force of roughly 10 tons to balance the attractive color force pulling the quarks together.  That's strong.</p>
+
+<p class="indent"><b>Lattice field theory</b> is a framework that allows us to study strongly interacting QFTs without relying on perturbative approximations.  Instead we make a different kind of approximation by replacing continuous space-time with a regular, finite grid of discrete points connected by links&mdash;the lattice.  The fields involved in the theory are likewise discretized, and defined on the lattice in such a way that we recover the original system in the <em>continuum limit</em> where the lattice possesses infinitely many points infinitesimally close together.  (I will generally talk about lattice gauge theory, which applies this procedure to the gauge field theories mentioned above.)</p>
+
+<p class="indent">Now that the system we're considering has a finite number of degrees of freedom, the integrals that we need to compute have a finite number of dimensions.  For example, the largest systems I've studied involve roughly billion-dimensional integrals.  With some effort, we can evaluate these integrals numerically using finite computers, thereby obtaining quantitative predictions for strongly interacting QFTs without relying on perturbative approximations or other simplifications (like the large-<em>N</em> planar limit mentioned <a href="lattice_susy.html">elsewhere</a> on this site) that are required to carry out pen-and-paper calculations.</p>
+
+<p class="indent">It should go without saying that these numerical calculations are not easy&mdash;a billion dimensions are still a lot, and in general we're interested in getting as close to the continuum limit as we can, to ensure that the discretization of space-time (our trick for simplifying the QFT calculation) doesn't introduce any noticeable artifacts in our predictions.  For decades the lattice gauge theory community has helped to drive advances in high-performance computing, simultaneously deploying large-scale parallel codes across thousands of cores in the world's biggest supercomputers as well as developing advanced algorithms to get the most benefit out of this investment in computer time.</p>
+
+<p class="indent">The central numerical technique we employ is known as <b>importance sampling <a href="https://en.wikipedia.org/wiki/Monte_Carlo_integration">Monte Carlo</a></b>.  This approach takes advantage of the fact that almost all of the field configurations over which we need to integrate are actually irrelevant&mdash;they contribute negligible decimal dust to the final answer.  In order to make the computation efficient, we design and use sophisticated algorithms to determine (on the fly) which field configurations are the most important for the system being studied, and then ignore all the rest.  These numerical methods use (psuedo)random numbers to find the important field configurations to sample, which led to the "Monte Carlo" terminology.  Depending on how many degrees of freedom there are in the system, and how much computing time we have to devote to it, we will typically evaluate integrals using only a few dozen or a few hundred independent configurations.  This leaves statistical uncertainties on the resulting predictions, which can be improved by investing more computing time.</p>
+
+<p class="indent">In addition to apply lattice field theory to study various strongly coupled systems within and beyond the standard model of particle physics, the research projects described in <a href="index.html">the other pages</a> also investigate the underlying numerical methods, continuously improving them in order to obtain the best results from the available computing resources.</p>
+
+<br><hr>
+
+<p class="left">Last modified 1 August 2017</p>
+
+<p class="right">
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
+  <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.davidschaich.net/basic.css"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS"></a><br>
+  <a href="http://www.fsf.org/register_form?referrer=8412"><img src="../images/fsf.png" alt="Free Software Foundation"></a>
+</p>
+</div>
+</body>
+</html>
