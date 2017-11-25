@@ -21,7 +21,18 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 59;
+    var rank = 60;
+
+    // 60, Jena1711
+    var Jena1711Loc  = new google.maps.LatLng(50.9294, 11.5847);
+    var Jena1711Name = 'Lattice studies of maximally supersymmetric Yang&ndash;Mills theories';
+    var Jena1711Date = '25 November 2017';
+    var Jena1711Text = '<em><a href="1711Jena.pdf">' + Jena1711Name + '</a></em>, Workshop on Strongly Interacting Field Theories, Friedrich Schiller University Jena, ' + Jena1711Date;
+    var Jena1711Mark = new google.maps.Marker({ map: map, position: Jena1711Loc, icon: invited_icon, zIndex: rank, title:Jena1711Name + ' (' + Jena1711Date + ')' });
+    var Jena1711Info = new google.maps.InfoWindow({ content: Jena1711Text, maxWidth: 300 });
+    google.maps.event.addListener(Jena1711Mark, 'click', function() { Jena1711Info.open(map, Jena1711Mark); });
+    if (name=='Jena1711') { Jena1711Info.open(map, Jena1711Mark); }
+    rank--;
 
     // 59, Lattice17
     var Lattice17Loc  = new google.maps.LatLng(37.1655, -3.5985);
@@ -697,9 +708,9 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9294, 11.5847, 8, 'Jena1711')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, Workshop on Strongly Interacting Field Theories, Friedrich Schiller University Jena, 25 November 2017</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(37.1655, -3.5985, 8, 'lattice17')"><em>Phases of a strongly coupled four-fermion theory</em>, Lattice 2017, Granada, Spain, 22 June 2017</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(52.2129, 20.9828, 8, 'Planck1705')"><em>Lattice gauge theory beyond the standard model</em>, 20th International Conference From the Planck Scale to the Electroweak Scale, Warsaw, 22 May 2017</a></td>
-    <td></td>
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.6515, 7.2199, 8, 'BadHonnef17')"><em>Light scalar from lattice strong dynamics</em>, 637th Wilhelm und Else Heraeus-Seminar "Understanding the LHC", Bad Honnef, Germany, 14 February 2017</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(55.9215, -3.1735, 8, 'Edinburgh1611')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, University of Edinburgh Higgs Centre Particle Physics Theory Seminar, 23 November 2016</a></td>
@@ -709,7 +720,7 @@
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(55.8718, -4.2913, 8, 'Glasgow1604')"><em>Physics Out Of The Box: The impact of lattice gauge theory</em>, University of Glasgow, 18 April 2016</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(42.7293, -73.6788, 8, 'RPI1602')"><em>Composite dark matter and the role of lattice field theory</em>, Rensselaer Polytechnic Institute Colloquium, 17 February 2016</a></td>
   </tr><tr>
-    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9340, 11.5817, 8, 'Jena1512')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, Friedrich Schiller University University Quantum Theory Seminar, 17 December 2015</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9340, 11.5817, 8, 'Jena1512')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, Friedrich Schiller University Jena Quantum Theory Seminar, 17 December 2015</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(52.4329, 13.5298, 8, 'Humboldt151123')"><em>Electroweak Phenomenology and Lattice Strong Dynamics</em>, Humboldt / DESY Lattice Seminar, 23 November 2015</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(52.4337, 13.5312, 8, 'Humboldt151118')"><em>N=4 supersymmetric Yang&ndash;Mills on a space-time lattice</em>, Humboldt University QFT / String Seminar, 18 November 2015</a></td>
   </tr><tr>
@@ -780,7 +791,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 1 August 2017</p>
+<p class="left">Last modified 25 November 2017</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
