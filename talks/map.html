@@ -21,7 +21,18 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 60;
+    var rank = 61;
+
+    // 61, Montpellier1712
+    var Montpellier1712Loc  = new google.maps.LatLng(43.6331, 3.8655);
+    var Montpellier1712Name = 'Lattice gauge theory at the electroweak scale';
+    var Montpellier1712Date = '6 December 2017';
+    var Montpellier1712Text = '<em><a href="1712Montpellier.pdf">' + Montpellier1712Name + '</a></em>, Workshop on Strong Dynamics at the Electroweak Scale, University of Montpellier, ' + Montpellier1712Date;
+    var Montpellier1712Mark = new google.maps.Marker({ map: map, position: Montpellier1712Loc, icon: invited_icon, zIndex: rank, title:Montpellier1712Name + ' (' + Montpellier1712Date + ')' });
+    var Montpellier1712Info = new google.maps.InfoWindow({ content: Montpellier1712Text, maxWidth: 300 });
+    google.maps.event.addListener(Montpellier1712Mark, 'click', function() { Montpellier1712Info.open(map, Montpellier1712Mark); });
+    if (name=='Montpellier1712') { Montpellier1712Info.open(map, Montpellier1712Mark); }
+    rank--;
 
     // 60, Jena1711
     var Jena1711Loc  = new google.maps.LatLng(50.9294, 11.5847);
@@ -695,7 +706,7 @@
 </head>
 <body onload="initialize(46.9512, 7.4389, 2, 'none')"> <!--Centered on Bern-->
 <div id="main">
-<a href="../index.html">Main</a> / <a href="../index.html">Presentations</a> / <b>Map</b>
+<a href="../index.html">Main</a> / <a href="index.html">Presentations</a> / <b>Map</b>
 
 <h3>Map of presentations</h3>
 
@@ -708,6 +719,10 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(43.6331, 3.8655, 8, 'Montpellier1712')"><em>Lattice gauge theory at the electroweak scale</em>, Workshop on Strong Dynamics at the Electroweak Scale, University of Montpellier, 6 December 2017</a></td>
+    <td></td>
+    <td></td>
+  </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9294, 11.5847, 8, 'Jena1711')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, Workshop on Strongly Interacting Field Theories, Friedrich Schiller University Jena, 25 November 2017</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(37.1655, -3.5985, 8, 'lattice17')"><em>Phases of a strongly coupled four-fermion theory</em>, Lattice 2017, Granada, Spain, 22 June 2017</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(52.2129, 20.9828, 8, 'Planck1705')"><em>Lattice gauge theory beyond the standard model</em>, 20th International Conference From the Planck Scale to the Electroweak Scale, Warsaw, 22 May 2017</a></td>
@@ -791,7 +806,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 25 November 2017</p>
+<p class="left">Last modified 14 December 2017</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
