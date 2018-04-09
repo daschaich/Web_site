@@ -21,7 +21,50 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 61;
+    var rank = 64;
+
+    // 64, FIU1803
+    var FIU1803Loc  = new google.maps.LatLng(25.7568, -80.3741);
+    var FIU1803Name = 'Physics Out Of The Box: Frontiers of Lattice Field Theory';
+    var FIU1803Date = '9 March 2018';
+    var FIU1803Text = '<em><a href="1803FIU.pdf">' + FIU1803Name + '</a></em>, Florida International University, ' + FIU1803Date;
+    var FIU1803Mark = new google.maps.Marker({ map: map, position: FIU1803Loc, icon: invited_icon, zIndex: rank, title:FIU1803Name + ' (' + FIU1803Date + ')' });
+    var FIU1803Info = new google.maps.InfoWindow({ content: FIU1803Text, maxWidth: 300 });
+    google.maps.event.addListener(FIU1803Mark, 'click', function() { FIU1803Info.open(map, FIU1803Mark); });
+    if (name=='FIU1803') { FIU1803Info.open(map, FIU1803Mark); }
+    rank--;
+
+    // 63, Bangalore1801
+    var Bangalore1801Loc  = new google.maps.LatLng(13.1459, 77.5143);
+    var Bangalore1801Name = 'Lattice N=4 Supersymmetric Yang&ndash;Mills';
+    var Bangalore1801Date = '31 January 2018';
+    var Bangalore1801Text = '<em><a href="1801Bangalore.pdf">' + Bangalore1801Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, ' + Bangalore1801Date;
+    var Bangalore1801Mark = new google.maps.Marker({ map: map, position: Bangalore1801Loc, icon: invited_icon, zIndex: rank, title:Bangalore1801Name + ' (' + Bangalore1801Date + ')' });
+    var Bangalore1801Info = new google.maps.InfoWindow({ content: Bangalore1801Text, maxWidth: 300 });
+    google.maps.event.addListener(Bangalore1801Mark, 'click', function() { Bangalore1801Info.open(map, Bangalore1801Mark); });
+    if (name=='Bangalore1801') { Bangalore1801Info.open(map, Bangalore1801Mark); }
+    rank--;
+    // 63, Bangalore1801
+    var Bangalore1801Loc  = new google.maps.LatLng(13.1459, 77.5143);
+    var Bangalore1801Name = 'Lattice N=4 Supersymmetric Yang&ndash;Mills';
+    var Bangalore1801Date = '31 January 2018';
+    var Bangalore1801Text = '<em><a href="1801Bangalore.pdf">' + Bangalore1801Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, ' + Bangalore1801Date;
+    var Bangalore1801Mark = new google.maps.Marker({ map: map, position: Bangalore1801Loc, icon: invited_icon, zIndex: rank, title:Bangalore1801Name + ' (' + Bangalore1801Date + ')' });
+    var Bangalore1801Info = new google.maps.InfoWindow({ content: Bangalore1801Text, maxWidth: 300 });
+    google.maps.event.addListener(Bangalore1801Mark, 'click', function() { Bangalore1801Info.open(map, Bangalore1801Mark); });
+    if (name=='Bangalore1801') { Bangalore1801Info.open(map, Bangalore1801Mark); }
+    rank--;
+
+    // 62, StonyBrook1801
+    var StonyBrook1801Loc  = new google.maps.LatLng(40.9159, -73.1271);
+    var StonyBrook1801Name = 'Maximally supersymmetric Yang&ndash;Mills on the lattice';
+    var StonyBrook1801Date = '11 January 2018';
+    var StonyBrook1801Text = '<em><a href="1801StonyBrook.pdf">' + StonyBrook1801Name + '</a></em>, Workshop on Continuum and Lattice Approaches to the Infrared Behavior of Conformal and Quasi-Conformal Gauge Theories, Simons Center for Geometry and Physics, Stony Brook University, ' + StonyBrook1801Date;
+    var StonyBrook1801Mark = new google.maps.Marker({ map: map, position: StonyBrook1801Loc, icon: invited_icon, zIndex: rank, title:StonyBrook1801Name + ' (' + StonyBrook1801Date + ')' });
+    var StonyBrook1801Info = new google.maps.InfoWindow({ content: StonyBrook1801Text, maxWidth: 300 });
+    google.maps.event.addListener(StonyBrook1801Mark, 'click', function() { StonyBrook1801Info.open(map, StonyBrook1801Mark); });
+    if (name=='StonyBrook1801') { StonyBrook1801Info.open(map, StonyBrook1801Mark); }
+    rank--;
 
     // 61, Montpellier1712
     var Montpellier1712Loc  = new google.maps.LatLng(43.6331, 3.8655);
@@ -719,9 +762,13 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(25.7568, -80.3741, 8, 'FIU1803')"><em>Physics Out Of The Box: Frontiers of Lattice Field Theory</em>, Florida International University, 9 March 2018</a></td>
+    <td></td>
+    <td></td>
+  </tr><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(13.1459, 77.5143, 8, 'Bangalore1801')"><em>Lattice N=4 Supersymmetric Yang&ndash;Mills</em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, 31 January 2018</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(40.9159, -73.1271, 8, 'StonyBrook1801')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, Workshop on Continuum and Lattice Approaches to the Infrared Behavior of Conformal and Quasi-Conformal Gauge Theories, Simons Center for Geometry and Physics, Stony Brook University, 11 January 2018</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(43.6331, 3.8655, 8, 'Montpellier1712')"><em>Lattice gauge theory at the electroweak scale</em>, Workshop on Strong Dynamics at the Electroweak Scale, University of Montpellier, 6 December 2017</a></td>
-    <td></td>
-    <td></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9294, 11.5847, 8, 'Jena1711')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, Workshop on Strongly Interacting Field Theories, Friedrich Schiller University Jena, 25 November 2017</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(37.1655, -3.5985, 8, 'lattice17')"><em>Phases of a strongly coupled four-fermion theory</em>, Lattice 2017, Granada, Spain, 22 June 2017</a></td>
@@ -806,7 +853,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 14 December 2017</p>
+<p class="left">Last modified 13 March 2018</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
