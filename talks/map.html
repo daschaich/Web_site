@@ -5,12 +5,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />-->
 <meta name="viewport" content="initial-scale=1.0" />
-<style type="text/css">
+<style>
   #map { height: 100%; margin-left: auto; margin-right: auto; }
-  td { vertical-align: top; width=30% }
+  td { vertical-align: top; width: 30%; }
 </style>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript">
+<!--Adapted from cloud.google.com/maps-platform/maps/...-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIVvvvOEVn_yybialepAE2wukO28-l-io&callback=initMap&sensor=false" async defer></script>
+<script>
   function initialize(lat, lon, zoom, name) {
     var pos = new google.maps.LatLng(lat, lon);
     var myOptions = { zoom: zoom, center: pos, mapTypeId: google.maps.MapTypeId.ROADMAP };
@@ -21,7 +22,29 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 64;
+    var rank = 66;
+
+    // 66, CERN1806
+    var CERN1806Loc  = new google.maps.LatLng(46.2319, 6.0547);
+    var CERN1806Name = 'Lattice studies of maximally supersymmetric Yang&ndash;Mills theories';
+    var CERN1806Date = '7 June 2018';
+    var CERN1806Text = '<em><a href="1806CERN.pdf">' + CERN1806Name + '</a></em>, CERN Lattice Seminar, ' + CERN1806Date;
+    var CERN1806Mark = new google.maps.Marker({ map: map, position: CERN1806Loc, icon: invited_icon, zIndex: rank, title:CERN1806Name + ' (' + CERN1806Date + ')' });
+    var CERN1806Info = new google.maps.InfoWindow({ content: CERN1806Text, maxWidth: 300 });
+    google.maps.event.addListener(CERN1806Mark, 'click', function() { CERN1806Info.open(map, CERN1806Mark); });
+    if (name=='CERN1806') { CERN1806Info.open(map, CERN1806Mark); }
+    rank--;
+
+    // 65, Bern1803
+    var Bern1803Loc  = new google.maps.LatLng(46.9512, 7.4390);
+    var Bern1803Name = 'Lower-dimensional lattice supersymmetry';
+    var Bern1803Date = '22 March 2018';
+    var Bern1803Text = '<em><a href="1803Bern.pdf">' + Bern1803Name + '</a></em>, University of Bern AEC Institute for Theoretical Physics lunch seminar, ' + Bern1803Date;
+    var Bern1803Mark = new google.maps.Marker({ map: map, position: Bern1803Loc, icon: icon, zIndex: rank, title:Bern1803Name + ' (' + Bern1803Date + ')' });
+    var Bern1803Info = new google.maps.InfoWindow({ content: Bern1803Text, maxWidth: 300 });
+    google.maps.event.addListener(Bern1803Mark, 'click', function() { Bern1803Info.open(map, Bern1803Mark); });
+    if (name=='Bern1803') { Bern1803Info.open(map, Bern1803Mark); }
+    rank--;
 
     // 64, FIU1803
     var FIU1803Loc  = new google.maps.LatLng(25.7568, -80.3741);
@@ -136,7 +159,7 @@
     var LatticeN4_BernLoc  = new google.maps.LatLng(46.9512, 7.4389);
     var LatticeN4_BernName = 'Lattice N=4 SYM';
     var LatticeN4_BernDate = '13 October 2016';
-    var LatticeN4_BernText = '<em><a href="latticeN4_Bern.pdf">' + LatticeN4_BernName + '</a></em>, University of Bern Institute for Theoretical Physics lunch seminar, ' + LatticeN4_BernDate;
+    var LatticeN4_BernText = '<em><a href="latticeN4_Bern.pdf">' + LatticeN4_BernName + '</a></em>, University of Bern AEC Institute for Theoretical Physics lunch seminar, ' + LatticeN4_BernDate;
     var LatticeN4_BernMark = new google.maps.Marker({ map: map, position: LatticeN4_BernLoc, icon: icon, zIndex: rank, title:LatticeN4_BernName + ' (' + LatticeN4_BernDate + ')' });
     var LatticeN4_BernInfo = new google.maps.InfoWindow({ content: LatticeN4_BernText, maxWidth: 300 });
     google.maps.event.addListener(LatticeN4_BernMark, 'click', function() { LatticeN4_BernInfo.open(map, LatticeN4_BernMark); });
@@ -762,9 +785,9 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(46.2319, 6.0547, 8, 'CERN1806')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, CERN Lattice Seminar, 7 June 2018</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(46.9512, 7.4390, 8, 'Bern1803')"><em>Lower-dimensional lattice supersymmetry</em>, University of Bern AEC Institute for Theoretical Physics lunch seminar, 22 March 2018</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(25.7568, -80.3741, 8, 'FIU1803')"><em>Physics Out Of The Box: Frontiers of Lattice Field Theory</em>, Florida International University, 9 March 2018</a></td>
-    <td></td>
-    <td></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(13.1459, 77.5143, 8, 'Bangalore1801')"><em>Lattice N=4 Supersymmetric Yang&ndash;Mills</em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, 31 January 2018</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(40.9159, -73.1271, 8, 'StonyBrook1801')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, Workshop on Continuum and Lattice Approaches to the Infrared Behavior of Conformal and Quasi-Conformal Gauge Theories, Simons Center for Geometry and Physics, Stony Brook University, 11 January 2018</a></td>
@@ -776,7 +799,7 @@
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.6515, 7.2199, 8, 'BadHonnef17')"><em>Light scalar from lattice strong dynamics</em>, 637th Wilhelm und Else Heraeus-Seminar "Understanding the LHC", Bad Honnef, Germany, 14 February 2017</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(55.9215, -3.1735, 8, 'Edinburgh1611')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, University of Edinburgh Higgs Centre Particle Physics Theory Seminar, 23 November 2016</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(46.9512, 7.4389, 8, 'LatticeN4_Bern')"><em>Lattice N=4 SYM</em>, University of Bern Institute for Theoretical Physics lunch seminar, 13 October 2016</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(46.9512, 7.4389, 8, 'LatticeN4_Bern')"><em>Lattice N=4 SYM</em>, University of Bern AEC Institute for Theoretical Physics lunch seminar, 13 October 2016</a></td>
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.9368, -1.3967, 8, 'Lattice16')"><em>Latest results from lattice N=4 super Yang&ndash;Mills</em>, Lattice 2016, Southampton, England, 26 July 2016</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(55.8718, -4.2913, 8, 'Glasgow1604')"><em>Physics Out Of The Box: The impact of lattice gauge theory</em>, University of Glasgow, 18 April 2016</a></td>
@@ -853,7 +876,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 13 March 2018</p>
+<p class="left">Last modified 21 June 2018</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
