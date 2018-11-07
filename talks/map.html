@@ -22,7 +22,51 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 66;
+    var rank = 70;
+
+    // 70, Stavanger1811
+    var Stavanger1811Loc  = new google.maps.LatLng(58.9378, 5.6916);
+    var Stavanger1811Name = 'Composite dark matter and the role of lattice field theory';
+    var Stavanger1811Date = '1 November 2018';
+    var Stavanger1811Text = '<em><a href="1811Stavanger.pdf">' + Stavanger1811Name + '</a></em>, University of Stavanger Physics Seminar, ' + Stavanger1811Date;
+    var Stavanger1811Mark = new google.maps.Marker({ map: map, position: Stavanger1811Loc, icon: invited_icon, zIndex: rank, title:Stavanger1811Name + ' (' + Stavanger1811Date + ')' });
+    var Stavanger1811Info = new google.maps.InfoWindow({ content: Stavanger1811Text, maxWidth: 300 });
+    google.maps.event.addListener(Stavanger1811Mark, 'click', function() { Stavanger1811Info.open(map, Stavanger1811Mark); });
+    if (name=='Stavanger1811') { Stavanger1811Info.open(map, Stavanger1811Mark); }
+    rank--;
+
+    // 69, ECT1809
+    var ECT1809Loc  = new google.maps.LatLng(46.0437, 11.1406);
+    var ECT1809Name = 'Lattice N=4 Supersymmetric Yang&ndash;Mills';
+    var ECT1809Date = '5 September 2018';
+    var ECT1809Text = '<em><a href="1809ECT.pdf">' + ECT1809Name + '</a></em>, Workshop on Quantum Gravity meets Lattice QFT, ECT* Trento, ' + ECT1809Date;
+    var ECT1809Mark = new google.maps.Marker({ map: map, position: ECT1809Loc, icon: invited_icon, zIndex: rank, title:ECT1809Name + ' (' + ECT1809Date + ')' });
+    var ECT1809Info = new google.maps.InfoWindow({ content: ECT1809Text, maxWidth: 300 });
+    google.maps.event.addListener(ECT1809Mark, 'click', function() { ECT1809Info.open(map, ECT1809Mark); });
+    if (name=='ECT1809') { ECT1809Info.open(map, ECT1809Mark); }
+    rank--;
+
+    // 68, Lattice18
+    var Lattice18Loc  = new google.maps.LatLng(42.7321, -84.4933);
+    var Lattice18Name = 'Progress and prospects of lattice supersymmetry';
+    var Lattice18Date = '24 July 2018';
+    var Lattice18Text = '<em><a href="1807Lattice.pdf">' + Lattice18Name + '</a></em>, Lattice 2018, Michigan State University, ' + Lattice18Date;
+    var Lattice18Mark = new google.maps.Marker({ map: map, position: Lattice18Loc, icon: invited_icon, zIndex: rank, title:Lattice18Name + ' (' + Lattice18Date + ')' });
+    var Lattice18Info = new google.maps.InfoWindow({ content: Lattice18Text, maxWidth: 300 });
+    google.maps.event.addListener(Lattice18Mark, 'click', function() { Lattice18Info.open(map, Lattice18Mark); });
+    if (name=='Lattice18') { Lattice18Info.open(map, Lattice18Mark); }
+    rank--;
+
+    // 67, Liverpool1807
+    var Liverpool1807Loc  = new google.maps.LatLng(53.4043, -2.9645);
+    var Liverpool1807Name = 'Physics Out Of The Box: The Impact of Lattice Field Theory';
+    var Liverpool1807Date = '5 July 2018';
+    var Liverpool1807Text = '<em><a href="1807Liverpool.pdf">' + Liverpool1807Name + '</a></em>, University of Liverpool, ' + Liverpool1807Date;
+    var Liverpool1807Mark = new google.maps.Marker({ map: map, position: Liverpool1807Loc, icon: invited_icon, zIndex: rank, title:Liverpool1807Name + ' (' + Liverpool1807Date + ')' });
+    var Liverpool1807Info = new google.maps.InfoWindow({ content: Liverpool1807Text, maxWidth: 300 });
+    google.maps.event.addListener(Liverpool1807Mark, 'click', function() { Liverpool1807Info.open(map, Liverpool1807Mark); });
+    if (name=='Liverpool1807') { Liverpool1807Info.open(map, Liverpool1807Mark); }
+    rank--;
 
     // 66, CERN1806
     var CERN1806Loc  = new google.maps.LatLng(46.2319, 6.0547);
@@ -50,7 +94,7 @@
     var FIU1803Loc  = new google.maps.LatLng(25.7568, -80.3741);
     var FIU1803Name = 'Physics Out Of The Box: Frontiers of Lattice Field Theory';
     var FIU1803Date = '9 March 2018';
-    var FIU1803Text = '<em><a href="1803FIU.pdf">' + FIU1803Name + '</a></em>, Florida International University, ' + FIU1803Date;
+    var FIU1803Text = '<em><a href="1803FIU.pdf">' + FIU1803Name + '</a></em>, Florida International University Colloquium, ' + FIU1803Date;
     var FIU1803Mark = new google.maps.Marker({ map: map, position: FIU1803Loc, icon: invited_icon, zIndex: rank, title:FIU1803Name + ' (' + FIU1803Date + ')' });
     var FIU1803Info = new google.maps.InfoWindow({ content: FIU1803Text, maxWidth: 300 });
     google.maps.event.addListener(FIU1803Mark, 'click', function() { FIU1803Info.open(map, FIU1803Mark); });
@@ -785,16 +829,24 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
+    <td></td>
+    <td></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(58.9378, 5.6916, 8, 'Stavanger1811')"><em>Composite dark matter and the role of lattice field theory</em>, University of Stavanger Physics Seminar, 1 November 2018</a></td>
+  </tr><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(46.0437, 11.1406, 8, 'ECT1809')"><em>Lattice N=4 Supersymmetric Yang&ndash;Mills</em>, Workshop on Quantum Gravity meets Lattice QFT, ECT* Trento, 5 September 2018</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(42.7321, -84.4933, 8, 'Lattice18')"><em>Progress and prospects of lattice supersymmetry</em>, Lattice 2018, Michigan State University, 24 July 2018</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(53.4043, -2.9645, 8, 'Liverpool1807')"><em>Physics Out Of The Box: The Impact of Lattice Field Theory</em>, University of Liverpool, 5 July 2018</a></td>
+  </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(46.2319, 6.0547, 8, 'CERN1806')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, CERN Lattice Seminar, 7 June 2018</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(46.9512, 7.4390, 8, 'Bern1803')"><em>Lower-dimensional lattice supersymmetry</em>, University of Bern AEC Institute for Theoretical Physics lunch seminar, 22 March 2018</a></td>
-    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(25.7568, -80.3741, 8, 'FIU1803')"><em>Physics Out Of The Box: Frontiers of Lattice Field Theory</em>, Florida International University, 9 March 2018</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(25.7568, -80.3741, 8, 'FIU1803')"><em>Physics Out Of The Box: Frontiers of Lattice Field Theory</em>, Florida International University Colloquium, 9 March 2018</a></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(13.1459, 77.5143, 8, 'Bangalore1801')"><em>Lattice N=4 Supersymmetric Yang&ndash;Mills</em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, 31 January 2018</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(40.9159, -73.1271, 8, 'StonyBrook1801')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, Workshop on Continuum and Lattice Approaches to the Infrared Behavior of Conformal and Quasi-Conformal Gauge Theories, Simons Center for Geometry and Physics, Stony Brook University, 11 January 2018</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(43.6331, 3.8655, 8, 'Montpellier1712')"><em>Lattice gauge theory at the electroweak scale</em>, Workshop on Strong Dynamics at the Electroweak Scale, University of Montpellier, 6 December 2017</a></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9294, 11.5847, 8, 'Jena1711')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, Workshop on Strongly Interacting Field Theories, Friedrich Schiller University Jena, 25 November 2017</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(37.1655, -3.5985, 8, 'lattice17')"><em>Phases of a strongly coupled four-fermion theory</em>, Lattice 2017, Granada, Spain, 22 June 2017</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(37.1655, -3.5985, 8, 'Lattice17')"><em>Phases of a strongly coupled four-fermion theory</em>, Lattice 2017, Granada, Spain, 22 June 2017</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(52.2129, 20.9828, 8, 'Planck1705')"><em>Lattice gauge theory beyond the standard model</em>, 20th International Conference From the Planck Scale to the Electroweak Scale, Warsaw, 22 May 2017</a></td>
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.6515, 7.2199, 8, 'BadHonnef17')"><em>Light scalar from lattice strong dynamics</em>, 637th Wilhelm und Else Heraeus-Seminar "Understanding the LHC", Bad Honnef, Germany, 14 February 2017</a></td>
@@ -876,7 +928,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 21 June 2018</p>
+<p class="left">Last modified 1 November 2018</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
