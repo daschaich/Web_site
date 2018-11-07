@@ -52,12 +52,14 @@ table {
 
 td.image {
   width: 20%;
+  vertical-align:top;
 }
 td.spacer {
   width: 5%;
 }
 td.content {
   width: 75%;
+  vertical-align:top;
 }
 
 ol {
