@@ -9,14 +9,14 @@
 <div id="main">
 <a href="../index.html">Main</a> / <a href="index.html">Research</a> / <b>background</b>
 
-<h3>Research &mdash; Background: Strong dynamics and lattice gauge theory</h3>
+<h3>Research &mdash; Background: Strong dynamics and lattice field theory</h3>
 
 <table>
   <tr>
     <td class="image"><img class="full" src="lattice.png" alt="Lattice"></td>
     <td class="spacer"></td>
     <td class="content">
-      <b>Summary:</b> The essence of my research is to use high-performance computing to gain insight into strongly interacting quantum field theories, through a framework known as lattice gauge theory.  Here I provide some non-technical background on strong dynamics and lattice gauge theory.<br><br>
+      <b>Summary:</b> The essence of my research is to use high-performance computing to gain insight into strongly interacting quantum field theories, through a framework known as lattice field theory.  Here I provide some non-technical background on strong dynamics and lattice field theory.<br><br>
       <b>Image:</b> A snapshot, produced by Claudio Rebbi, of a quantum field configuration containing a proton in a discretized lattice space-time.  The snapshot shows the three spatial dimensions of the lattice at a particular time.  The colors represent the "color" charges of quarks governed by the theory of quantum chromodynamics and the size of each sphere shows the magnitude of the color field at the corresponding point in space.<br>
     </td>
   </tr>
@@ -40,7 +40,7 @@
 
 <p class="indent">Now that the systems we're considering have a finite number of degrees of freedom, the integrals that we need to compute have a finite number of dimensions.  For example, the largest systems I've studied involve roughly billion-dimensional integrals.  With some effort, we can evaluate these integrals numerically using finite computers, thereby obtaining quantitative predictions for strongly interacting QFTs without relying on perturbative approximations or other simplifications (like the large-<em>N</em> planar limit mentioned <a href="lattice_susy.html">elsewhere</a> on this site) that are required to carry out pen-and-paper calculations.</p>
 
-<p class="indent">It should go without saying that these numerical calculations are not easy&mdash;a billion dimensions are still a lot, and in general we're interested in getting as close to the continuum limit as we can, to ensure that the discretization of space-time (our trick for simplifying the QFT calculation) doesn't introduce any noticeable artifacts in our predictions.  For decades the lattice gauge theory community has helped to drive advances in high-performance computing, simultaneously deploying large-scale parallel codes across thousands of cores in the world's biggest supercomputers as well as developing advanced algorithms to get the most benefit out of this investment in computer time.</p>
+<p class="indent">It should go without saying that these numerical calculations are not easy&mdash;a billion dimensions are still a lot, and in general we're interested in getting as close to the continuum limit as we can, to ensure that the discretization of space-time (our trick for simplifying the QFT calculation) doesn't introduce any noticeable artifacts in our predictions.  For decades the lattice field theory community has helped to drive advances in high-performance computing, simultaneously deploying large-scale parallel codes across thousands of cores in the world's biggest supercomputers as well as developing advanced algorithms to get the most benefit out of this investment in computer time.</p>
 
 <p class="indent">The central numerical technique we employ is known as <b>importance sampling <a href="https://en.wikipedia.org/wiki/Monte_Carlo_integration">Monte Carlo</a></b>.  This approach takes advantage of the fact that almost all of the field configurations over which we need to integrate are actually irrelevant&mdash;they contribute negligible decimal dust to the final answer.  In order to make the computation efficient, we design and use sophisticated algorithms to determine (on the fly) which field configurations are the most important for the system being studied, and then ignore all the rest.  These numerical methods use (psuedo)random numbers to find the important field configurations to sample, which led to the "Monte Carlo" terminology.  Depending on how many degrees of freedom there are in the system, and how much computing time we have to devote to it, we will typically evaluate integrals using only a few dozen or a few hundred independent configurations.  This leaves statistical uncertainties on the resulting predictions, which can be improved by investing more computing time.</p>
 
@@ -48,7 +48,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 3 August 2017</p>
+<p class="left">Last modified 7 November 2018</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>

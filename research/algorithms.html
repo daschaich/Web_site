@@ -16,7 +16,8 @@
     <td class="image"><img class="full" src="algorithms.png" alt="Algorithms image"></td>
     <td class="spacer"></td>
     <td class="content">
-      <b>Image:</b> From <a href="https://arxiv.org/abs/1403.2761">arXiv:1403.2761</a>, correlated predictions for the topological susceptibility and (inverse) auto-correlations of lattice QCD calculations, resulting from novel maximum-likelihood analyses of transitions between topological sectors.<br><br>
+      <b>Summary:</b> There are many algorithmic challenges to address in lattice field theory research, which can significantly impact which physics questions can be answered in a reasonable amount of time.  The progress of the field depends on both developing improved numerical algorithms and implementing them efficiently on cutting-edge hardware.  In addition to the algorithm development I carried out for many of the physics-focused projects listed above, I have also worked on lattice fermion formulations with improved chiral symmetry as well as the issue of critical slowing down.  In some cases it is best to explore these challenges in simpler test systems, which can provide excellent opportunities for beginners to quickly contribute to the field.<br><br>
+      <b>Image:</b> From <a href="https://arxiv.org/abs/1403.2761">arXiv:1403.2761</a>, correlated predictions for the topological susceptibility and (inverse) auto-correlations of lattice QCD calculations, obtained from a novel maximum-likelihood analysis of transitions between topological sectors.<br><br>
       <b>Related publications:</b> <a href="https://arxiv.org/abs/1403.2761">arXiv:1403.2761</a>, <a href="https://arxiv.org/abs/0906.2813">arXiv:0906.2813</a>, <a href="https://arxiv.org/abs/0902.0045">arXiv:0902.0045</a>, <a href="http://inspirehep.net/record/1386200">Bachelor thesis</a>
     </td>
   </tr>
@@ -24,21 +25,21 @@
 
 <br><hr><br>
 
-<p class="indent">The discussion of this project is currently being updated during April 2018.</p>
+<p class="indent">My research relies on steady advances in numerical algorithms complementing improvements in computing hardware.</p>
 
-<p class="indent">My research is only possible thanks to steady advances in numerical algorithms complementing improvements in computing hardware, and this work will become even more important in the future.</p>
+<p class="indent">A basic ingredient of lattice calculations is repeated solution of a linear system, <em>Ax=b</em>, where <em>A</em> is a large sparse matrix.  "Large" means that this matrix has millions of rows and millions of columns, involving far too much information to store in a computer's memory.  "Sparse" means that most of its elements are exactly zero.  Even storing only the relatively few non-zero matrix elements is outrageously inefficient.  Instead, we use iterative methods such as the conjugate gradient algorithm to solve this equation for <em>x</em> without explicitly allocating memory for the full matrix <em>A</em>.</p>
 
-<p class="indent">A basic ingredient of lattice calculations is repeated solution of a linear system, <em>Ax=b</em>, where <em>A</em> is a large sparse matrix known as the Dirac operator.  By "large", I mean that this matrix formally has millions of rows and millions of columns.  Even though the matrix is sparse (most entries are zero), this is far too much data to store in a computer's memory.  We use iterative techniques such as the conjugate gradient algorithm to solve this equation for <em>x</em> without explicitly writing down the full matrix <em>A</em>.  It is this iterative calculation that must be performed repeatedly to evaluate the quark-line disconnected diagrams mentioned above.</p>
-
+<!--
 <p class="indent">In recent years, calculations involving disconnected diagrams have benefited greatly from the development and application of multigrid algorithms that dramatically decrease the computational cost of each solve.  Multigrid algorithms represent the physical system on a succession of coarser grids with smaller systems to solve, adaptively determining the best representation of the system on the coarser levels.  Applied to the studies reported in <a href="http://arxiv.org/abs/1012.0562">arXiv:1012.0562</a>, multigrid algorithms can reduce costs by up to an order of magnitude, which made possible a new direction of research: performing disconnected diagrams calculations that involve the light (up and down) quarks in addition to strange quarks.</p>
 
 <p class="indent">On the hardware side, graphics processing units (GPUs) have produced comparable performance improvements in certain calculations.  GPUs can sustain enormous rates of computation, but memory and bandwidth constraints make it difficult to apply GPU computing to many common problems.  These sorts of difficulties will likely become more severe as high-performance computing continues to evolve in coming years.  Cheap and rapidly improving GPUs can be an ideal testbed for developing software that will get the most out of future computers.</p>
+-->
 
-<p class="indent">In addition to working on projects that apply GPU computing and multigrid algorithms to reduce computational burdens, I have also performed research into the development of other improved algorithms [<a href="http://arxiv.org/abs/0906.2813">arXiv:0906.2813</a>], though this work is a bit too specialized to discuss in detail here.  A final interesting aspect of this line of research is that it can provide an entry point into the field.  We often use simple models to design and test improved techniques.  These smaller-scale computational projects can be more tractable for beginners, while still providing significant benefits to the field as a whole.</p>
+<p class="indent">I have performed research into the development of improved lattice fermion formulations with algorithms, .  A final interesting aspect of this line of research is that it can provide an entry point into the field.  We often use simple models to design and test improved techniques.  These smaller-scale computational projects can be more tractable for beginners, while still providing significant benefits to the field as a whole.</p>
 
 <br><hr>
 
-<p class="left">Last modified 9 April 2018</p>
+<p class="left">Last modified 7 November 2018</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
