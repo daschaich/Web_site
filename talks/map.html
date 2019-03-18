@@ -22,7 +22,29 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 70;
+    var rank = 72;
+
+    // 72, Liverpool1811
+    var Liverpool1811Loc  = new google.maps.LatLng(53.4050, -2.9653);
+    var Liverpool1811Name = 'Lattice studies of maximally supersymmetric Yang&ndash;Mills theories';
+    var Liverpool1811Date = '28 November 2018';
+    var Liverpool1811Text = '<em><a href="1811Liverpool.pdf">' + Liverpool1811Name + '</a></em>, University of Liverpool Theoretical Physics Seminar, ' + Liverpool1811Date;
+    var Liverpool1811Mark = new google.maps.Marker({ map: map, position: Liverpool1811Loc, icon: invited_icon, zIndex: rank, title:Liverpool1811Name + ' (' + Liverpool1811Date + ')' });
+    var Liverpool1811Info = new google.maps.InfoWindow({ content: Liverpool1811Text, maxWidth: 300 });
+    google.maps.event.addListener(Liverpool1811Mark, 'click', function() { Liverpool1811Info.open(map, Liverpool1811Mark); });
+    if (name=='Liverpool1811') { Liverpool1811Info.open(map, Liverpool1811Mark); }
+    rank--;
+
+    // 71, Swansea1811
+    var Swansea1811Loc  = new google.maps.LatLng(51.6088, -3.9821);
+    var Swansea1811Name = 'Maximally supersymmetric Yang&ndash;Mills on the lattice';
+    var Swansea1811Date = '23 November 2018';
+    var Swansea1811Text = '<em><a href="1811Swansea.pdf">' + Swansea1811Name + '</a></em>, Swansea University Theory Seminar, ' + Swansea1811Date;
+    var Swansea1811Mark = new google.maps.Marker({ map: map, position: Swansea1811Loc, icon: invited_icon, zIndex: rank, title:Swansea1811Name + ' (' + Swansea1811Date + ')' });
+    var Swansea1811Info = new google.maps.InfoWindow({ content: Swansea1811Text, maxWidth: 300 });
+    google.maps.event.addListener(Swansea1811Mark, 'click', function() { Swansea1811Info.open(map, Swansea1811Mark); });
+    if (name=='Swansea1811') { Swansea1811Info.open(map, Swansea1811Mark); }
+    rank--;
 
     // 70, Stavanger1811
     var Stavanger1811Loc  = new google.maps.LatLng(58.9378, 5.6916);
@@ -829,8 +851,8 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
-    <td></td>
-    <td></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(53.4050, -2.9653, 8, 'Liverpool1811')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, University of Liverpool Theoretical Physics Seminar, 28 November 2018</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(51.6088, -3.9821, 8, 'Swansea1811')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, Swansea University Theory Seminar, 23 November 2018</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(58.9378, 5.6916, 8, 'Stavanger1811')"><em>Composite dark matter and the role of lattice field theory</em>, University of Stavanger Physics Seminar, 1 November 2018</a></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(46.0437, 11.1406, 8, 'ECT1809')"><em>Lattice N=4 Supersymmetric Yang&ndash;Mills</em>, Workshop on Quantum Gravity meets Lattice QFT, ECT* Trento, 5 September 2018</a></td>
@@ -928,7 +950,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 1 November 2018</p>
+<p class="left">Last modified 28 November 2018</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
