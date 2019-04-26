@@ -20,3 +20,6 @@ reading*
 reu*
 teaching/1213_AdQFT/private/
 update*
+*.aux
+*.out
+*.log
