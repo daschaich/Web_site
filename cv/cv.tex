@@ -1,0 +1,604 @@
+% ------------------------------------------------------------------
+% Based on template provided by Theodore Pavlic
+% http://www.tedpavlic.com/post_resume_cv_latex_example.php
+\documentclass[10 pt]{article}
+\usepackage{calc}
+\usepackage{revnum}
+
+% Put the section titles on left side of page
+\reversemarginpar
+
+% Page geometry -- marginparwidth sets length of section titles,
+%                  while marginparsep sets space between titles and text
+%\usepackage[paper=letterpaper, marginparwidth=1 in, marginparsep=0.15 in, margin=0.75 in, includemp]{geometry}
+\usepackage[paper=a4paper, marginparwidth=1 in, marginparsep=0.15 in, margin=0.62 in, includemp]{geometry}
+
+\usepackage[none]{hyphenat}
+\sloppy
+
+% Fancy page layout
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}    % Uncomment to get rid of page numbers in footer
+
+% Header (title) with a horizontal rule under it
+% Use Large instead of large due to 10-point base style
+\setlength{\parindent}{0 in}    % Needed for header, could overwrite below
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\newcommand{\makeheading}[1]%
+    {\hspace*{-\marginparsep minus \marginparwidth}%
+     \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+        {\Large \bfseries #1}\\[-0.15\baselineskip]%
+         \rule{\columnwidth}{1pt}%
+     \end{minipage}}
+
+% Footnote formatting
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+      {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+       CV page \arabic{page} of \protect\pageref*{LastPage} % +LP
+%       \arabic{page}                 % -LP
+       \hfill \,}}
+
+% Link formatting
+\usepackage{color, hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.5}
+\hypersetup{colorlinks, breaklinks, linkcolor=darkblue, urlcolor=darkblue, anchorcolor=darkblue, citecolor=darkblue, pdfstartview={FitH}, pdfnewwindow=true, pdfpagemode=UseNone}
+
+% Section headings
+\renewcommand{\section}[2]%
+    {\pagebreak[2]\vspace{1.3\baselineskip}%
+%     \phantomsection\addcontentsline{toc}{section}{#1}% % DS
+     \hspace{0in}%
+     \marginpar{
+     \raggedright \scshape #1}#2}
+
+% A basic list with a little space between the lines
+\newenvironment{spacelist}
+  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{8 mm}}}{\end{list}}
+
+% A basic list with no space between the lines
+\newenvironment{tightlist}
+  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{-3 pt} \setlength{\leftmargin}{8 mm}}}{\end{list}}
+
+% A basic list with no indentation and a little space between the lines
+\newenvironment{spacelistout}
+  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
+
+% A basic list with no indentation or space between the lines
+\newenvironment{tightlistout}
+  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{-3 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
+
+% A basic list with a little indentation but still no space between the lines
+\newenvironment{thesislist}
+  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{0 pt} \setlength{\leftmargin}{6 mm}}}{\end{list}}
+
+% To add some paragraph space between lines
+% This also tells LaTeX to preferably break a page on one of these gaps if there is a needed pagebreak nearby
+\newcommand{\blankline}{\quad\pagebreak[2]}
+\newcommand{\spacer}{\blankline\vspace{12 pt}\blankline}
+
+% Try to ensure that pagebreaks don't split up items
+\newcommand{\pagebreakitem}{\item\pagebreak[2]}
+
+% Turn italicization of titles on or off
+\newcommand{\optem}[1]{\textit{#1}}
+%\newcommand{\optem}[1]{``#1''}
+
+% Standard shortcuts
+\usepackage{verbatim} % For comment environment
+\newcommand{\lra}{\ensuremath{\longrightarrow} }
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+% The actual content
+\begin{document}
+\raggedright
+\makeheading{David Schaich --- Curriculum vitae \hfill \textnormal{\footnotesize{26 April 2019}}}
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Contact}
+\begin{tabular}[t]{ll}
+  Department of Mathematical Sciences \hspace{1 cm} & +44 (0)151 794 3778 (Office)                                               \\
+  University of Liverpool                           & +44 (0)7568 168895 (Mobile)                                                \\
+  Liverpool L69 7ZL                                 & Skype: daschaich                                                           \\ % Ekiga: schaich
+  United Kingdom                                    & \href{mailto:david.schaich@liverpool.ac.uk}{david.schaich@liverpool.ac.uk} \\
+  \url{http://www.davidschaich.net}                 &                                                                            \\
+\end{tabular}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\begin{comment}
+\section{Personal} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+United States citizen, born 15 December 1983
+
+\spacer
+\end{comment}
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Employment} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  2019--present & Lecturer, University of Liverpool                               \\
+  2016--2019    & Postdoctoral Research Associate, University of Bern             \\
+  2013--2016    & Postdoctoral Research Associate, Syracuse University            \\
+  2011--2013    & Postdoctoral Research Associate, University of Colorado Boulder \\
+\end{tabular}
+
+\spacer
+
+\begin{comment}
+Syracuse University, Syracuse NY
+\begin{tightlistout}
+  \item Postdoctoral Research Associate \hfill since September 2013%
+  \item ---Supported by DOE \href{http://www.scidac.gov}{Scientific Discovery through Advanced Computing} (SciDAC) program
+  \item ---Research focused on lattice studies of strongly interacting supersymmetric systems
+  \item ---Helped mentor graduate students Aarti Veernala and Raghav Jha
+  \item ---Organized weekly \href{http://web.physics.syr.edu/events/2015-16-List-SEM-het-rel.html}{theory seminars} and informal \href{http://dschaich.expressions.syr.edu/theory-meeting/}{particle theory meetings}
+%  \item ---Member of the \href{http://www.yale.edu/LSD/index.html}{Lattice Strong Dynamics Collaboration}
+\end{tightlistout}
+
+\blankline
+
+University of Colorado Boulder
+\begin{tightlistout}
+  \item Postdoctoral Research Associate \hfill September 2011--August 2013%
+  \item ---Research focused on methods to explore lattice gauge theories beyond QCD%, \item \hfill including research into novel computational techniques of generic applicability
+  \item ---Helped mentor graduate students Anqi Cheng and Gregory Petropoulos
+    \begin{tightlist}
+      \item Guided and supervised research projects, in coordination with Prof.~A.~Hasenfratz
+      \item Provided training in massively parallel lattice code, e.g.~through \href{http://www.americanscientist.org/issues/pub/empirical-software-engineering/4}{pair programming}
+%      \item Helped lead informal \href{http://www-hep.colorado.edu/~schaich/AdQFT/}{Advanced Quantum Field Theory} course, 2012--2013
+    \end{tightlist}
+  \item ---Organized weekly \href{http://www-hep.colorado.edu/~schaich/jclub.html}{high-energy theory journal club} and informal \href{http://www-hep.colorado.edu/~schaich/AdQFT/}{course in advanced QFT}
+\end{tightlistout}
+
+%\blankline
+
+\blankline
+\vspace{12 pt}
+
+Boston University
+\begin{tightlistout}
+  \item Member of Center for Computational Science \hfill September 2006--June 2011
+  \item Member of Particle Theory Group \hfill September 2007--June 2011%
+%  \item {\bf NSF IGERT Fellow \hfill May 2007--April 2009}
+%  \item {\bf Dean's Fellow \hfill September 2006--April 2007}%
+  \item ---Research focused on lattice studies of new strong dynamics beyond the standard model
+%  \item ---Member of the \href{http://www.yale.edu/LSD/index.html}{Lattice Strong Dynamics Collaboration} and \href{http://bsm.physics.yale.edu}{USQCD BSM Collaboration}
+  \item ---Graded Quantum Field Theory I--II under E.~Katz (2008--09) and M.~Schmaltz (2010--11)
+\end{tightlistout}
+
+\blankline
+
+\blankline
+\vspace{12 pt}
+
+\textbf{Amherst College}, Amherst MA
+\begin{tightlistout}
+%  \item {\bf Physics Department Teaching Assistant \hfill January 2003--May 2006}
+%  \item {\bf Mathematics Department Teaching Assistant \hfill September 2004--May 2006}%
+  \item {\bf Physics Teaching Assistant \hfill January 2003--May 2006}
+  \item {\bf Mathematics Teaching Assistant \hfill September 2004--May 2006}%
+  \item Graded homework and ran review sessions for introductory and intermediate undergraduate courses in physics, mathematics and statistics
+%  \item ---Assisted courses in Mechanics \& Wave Motion; Electromagnetism \& Optics; Dynamics of Charges and Fields; Modern Physics; Mathematical Methods of Theoretical Physics; Quantum Mechanics; Single- and Multi-variable Calculus; Introduction to Statistics; and Differential Equations.  Duties included (depending on the course) grading homework or lab reports, supervising laboratory sessions and holding help sessions.
+%  \item {\bf Summer Astronomy Intern \hfill May--July 2004}%
+%  \item ---Produced educational simulations of tidal interactions.
+\end{tightlistout}
+
+%\blankline
+
+%\blankline
+
+%\textbf{Nicholson Engineering Co.}, Birmingham MI
+%\begin{tightlist}
+%  \item {\bf Electrical Engineering Intern \hfill June--August 2002}%
+%  \item Constructed electro-hydraulic servo-mechanisms for industry.
+%  \item Also helped manage inventory and bookkeeping.
+%\end{tightlist}
+
+%\blankline
+
+\newpage
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Visiting positions}
+\href{http://www.kitp.ucsb.edu/}{{\bf Kavli Institute for Theoretical Physics}}, Santa Barbara CA \hfill {\bf August--September 2015}%
+
+\blankline
+
+\href{http://www.aspenphys.org}{{\bf Aspen Center for Physics}}, Aspen CO \hfill {\bf May--June 2015} \\%
+\textcolor{white}{hack} \hfill {\bf May--June 2013}%
+
+\blankline
+
+\href{http://www2.phy.ntnu.edu.tw/~highenergy/}{{\bf National Taiwan Normal University}} and \\ \href{http://phys.cts.ntu.edu.tw/en/}{{\bf National Center for Theoretical Sciences}}, Taipei \hfill {\bf June--August 2011}%
+%\begin{tightlist}
+%  \item {\bf NSF/NSC EAPSI Fellow \hfill June--August 2011}%
+%  \item Developed and applied advanced numerical techniques for lattice calculations
+%\end{tightlist}
+
+\blankline
+%\vspace{6 pt}
+
+\href{http://www.llnl.gov}{{\bf Lawrence Livermore National Lab}}, Livermore CA \hfill {\bf January--February 2010}%
+%\begin{tightlist}
+%  \item {\bf Visiting Researcher \hfill January--February 2010}%
+%  \item Worked with members of the Lattice Strong Dynamics Collaboration on numerical studies of new strong dynamics, through Livermore's Academic Cooperation program.
+%\end{tightlist}
+
+\blankline
+%\vspace{6 pt}
+
+\href{http://public.web.cern.ch}{{\bf CERN}}, Geneva, Switzerland \hfill {\bf June--August 2005}%
+%\begin{tightlist}
+%  \item {\bf Summer Research Assistant \hfill June--August 2005}%
+%  \item Developed and tested software to reconstruct the mass of the top quark from dilepton decay events at the Large Hadron Collider.  Member of the ATLAS experiment.
+%\end{tightlist}
+
+%\blankline
+%\vspace{6 pt}
+
+%\textbf{Hope College}, Holland MI \hfill {\bf May--July 2003}%
+%\begin{tightlist}
+%  \item {\bf Summer Research Assistant \hfill May--July 2003}%
+%  \item Used cubic equations of state to calculate series solutions for fluid properties as direct functions of temperature.
+%\end{tightlist}
+\end{comment}
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Education} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  2011  & Ph.D., Physics, Boston University                                                 \\
+  2011  & Certificate in Computational Science, Boston University                           \\
+  2008  & M.A., Physics, Boston University                                                  \\
+  2006  & B.A. \textit{summa cum laude}, Physics, History, and Mathematics, Amherst College \\
+\end{tabular}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Publication metrics} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+57 papers; \ 1443 citations; \ \href{https://en.wikipedia.org/wiki/H-index}{$h = 23$}; \ \href{https://en.wikipedia.org/wiki/G-index}{$g = 36$} \\[1 pt]
+See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/author/profile/D.Schaich.1}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Recent grants} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  2018 & University of Bern Faculty of Science conference travel grant, 1700 CHF                                                \\[6 pt]
+  2018 & \href{http://www.usqcd.org}{USQCD} computing allocation, 29M core hours                                                \\ % BNL (KNL) TODO: Only participating...
+       & \textit{Composite Higgs model with four light and six heavy flavors}                                                   \\[6 pt]
+  2018 & USQCD computing allocation, 12M core hours                                                                             \\ % Fermilab TODO: Only participating...
+       & \textit{Thermodynamics of SYM theory in three and four dimensions}                                                     \\[6 pt]
+  2017 & USQCD computing allocation, 2.52M core hours                                                                           \\ % Fermilab
+       & \textit{Exploring Improved Methods to Extract the 0$^{++}$ Mass} \\ & \textit{in an SU(3) Gauge Theory with 8 Flavors} \\[6 pt]
+  2017 & USQCD computing allocation, 12.5M core hours                                                                           \\ % Fermilab
+       & \textit{Thermodynamics of 3D Supersymmetric Yang--Mills}                                                               \\[6 pt]
+  2017 & USQCD computing allocation, 2.46M core hours                                                                           \\ % JLab
+       & \textit{A new critical point in lattice four-fermion theories?}                                                        \\[6 pt]
+  2016 & \href{http://www.xsede.org}{XSEDE} computing allocation, 4.11M core hours                                              \\ % Comet at SDSC
+       & \textit{Lattice studies of supersymmetric gauge theories}                                                              \\
+\end{tabular}
+
+%\begin{comment}
+\blankline % !!! Less vertical space
+
+\section{Pending grants} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  2019  & \textit{Phases of a Higgs--Yukawa Theory and Symmetric Mass Generation} \\ % Fermilab
+        & (2.25M core-hour request submitted to USQCD)                            \\[6 pt]
+  2019  & \textit{Composite Higgs model with four light and six heavy flavors}    \\ % BNL (KNL) TODO: Only participating...
+        & (8.75M core-hour request submitted to USQCD)                            \\
+\end{tabular}
+%\end{comment}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Honors and awards} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+     2019     & UK Research \& Innovation Future Leaders Fellowship finalist \\
+  2007--2009  & National Science Foundation IGERT Fellowship                 \\
+     2008     & Boston University Physics Department Chair's Book Prize      \\
+  2006--2007  & Boston University Dean's Fellowship                          \\
+  2006--2007  & Forris Jewett Moore Fellowship from Amherst College          \\
+     2006     & Sigma Xi, The Scientific Research Society                    \\
+     2005     & Phi Beta Kappa                                               \\
+\end{tabular}
+
+\newpage
+
+\begin{comment}
+\begin{tightlistout}
+  \item 2007--2009 \quad National Science Foundation IGERT Fellowship
+  \item \quad 2008 \quad Boston University Physics Department Chair's Book Prize
+%  \begin{tightlist}
+%    \item (``In recognition of excellence in achievement by a first year graduate student'')
+%  \end{tightlist}
+  \item 2006--2007 \quad Boston University Dean's Fellowship
+%  \item Forris Jewett Moore Fellowship (Amherst College), 2006--2007
+%  \item NSF Research Experience for Undergraduates fellowship, U. Michigan and CERN, 2005
+%  \item John Petropulos Prize in Historical Scholarship (Amherst College), 2005
+%  \item NSF Research Experience for Undergraduates fellowship, Hope College, 2003
+  \item \quad 2006 \quad Sigma Xi, The Scientific Research Society
+  \item \quad 2005 \quad Phi Beta Kappa %(honor society advocating for the liberal arts and sciences), since 2005
+\end{tightlistout}
+\end{comment}
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Short-term appointments} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  2018  & International Centre for Theoretical Sciences, Bangalore, January--February \\
+  2016  & Kavli Institute for Theoretical Physics, Santa Barbara, February--March     \\
+  2015  & Humboldt University, Berlin, November--December                             \\
+  2015  & Kavli Institute for Theoretical Physics, Santa Barbara, August--September   \\
+  2015  & Aspen Center for Physics, May--June                                         \\
+  2013  & Aspen Center for Physics, May--June                                         \\
+  2011  & National Center for Theoretical Sciences, Taipei, June--August              \\
+  2010  & Lawrence Livermore National Lab, January--February                          \\
+  2005  & CERN, June--August                                                          \\
+%  2003  & Hope College, May--July                                                     \\
+\end{tabular}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Teaching} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  Fall 2017  & \href{http://www.davidschaich.net/teaching/1718F_BSM/index.html}{New strong dynamics beyond the standard model} (graduate), U.~Bern      \\
+  2013--2014 & \href{http://www.davidschaich.net/teaching/1314_AdQFT/index.html}{Advanced quantum field theory} (graduate, informal), Syracuse U. \\
+  2012--2013 & \href{http://www.davidschaich.net/teaching/1213_AdQFT/index.html}{Advanced Quantum Field Theory} (graduate, informal), U.~Colorado \\
+\end{tabular}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Workshop organization} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  2018  & \href{http://www.ectstar.eu/node/4226}{Interdisciplinary approach to QCD-like composite dark matter}                                                                        \\
+        & ECT* Trento, 1--5 October                                                                                                                                                   \\[6 pt]
+  2018  & \href{https://higgs.ph.ed.ac.uk/workshops/numerical-approaches-holography-quantum-gravity-and-cosmology}{Numerical approaches to holography, quantum gravity and cosmology} \\
+        & Higgs Centre for Theoretical Physics, University of Edinburgh, 21--24 May                                                                                                   \\[6 pt]
+  2014  & \href{http://blogs.bu.edu/ppcm/}{Field Theoretic Computer Simulations for Particle Physics and Condensed Matter}                                                            \\
+        & Boston University, 8--10 May                                                                                                                                                \\[6 pt]
+  2012  & \href{http://www-hep.colorado.edu/~schaich/lat-exp-2012/}{Lattice Meets Experiment: Beyond the Standard Model}, U.~Colorado, 26--27 October                                 \\[6 pt]
+  2010  & \href{http://www-hep.colorado.edu/~schaich/QCDNA6/}{QCDNA6: Numerical Analysis for Lattice Gauge Theory}, Boston U., 8--10 September                                        \\[6 pt]
+  2009  & \href{http://www-hep.colorado.edu/~schaich/LGTforLHC2009/}{Lattice Gauge Theory for LHC Physics}, Boston University, 6--7 November                                          \\
+\end{tabular}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{PhD students mentored} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  2016--present & Nouman Butt (advisor: Simon Catterall), Syracuse University           \\
+  2014--2019    & Raghav Jha (advisor: Simon Catterall), Syracuse University            \\
+                & \qquad \lra Postdoc (Perimeter)                                       \\[6 pt]
+  2013--2015    & Aarti Veernala (advisor: Simon Catterall), Syracuse University        \\
+                & \qquad \lra Postdoc (Fermilab)                                        \\[6 pt]
+  2011--2014    & Gregory Petropoulos (advisor: Anna Hasenfratz), U.~Colorado Boulder   \\
+                & \qquad \lra Data science industry (CenturyLink Cognilytics)           \\[6 pt]
+  2011--2014    & Anqi Cheng (advisor: Anna Hasenfratz), University of Colorado Boulder \\
+                & \qquad \lra Data science industry (Rule14)                            \\
+\end{tabular}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Journal referee} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tightlistout} % publons.com/author/1444034/
+%  \item Physical Review Letters, Physical Review D, Physical Review B, Journal of High Energy Physics, Nuclear Physics B, International Journal of Modern Physics A
+  \item Physical Review Letters, 7 reviews since 2014 % (LQ14090, LG15784, LN15026, LU15864, LX15294, LA15701, LN15835)
+  \item Physical Review D, 5 reviews since 2012 % (DUR1049, DZ11259, DDK1011, DFK1014, DY11931)
+  \item Journal of High Energy Physics, 2 reviews since 2017 % (JHEP_138P_1117, JHEP_197P_0119)
+  \item Physical Review B, 4 reviews since 2012 % (BV11962, BG12716, BJ13355, BU13792)
+  \item Nuclear Physics B, 1 review since 2014 % (NPB-D-14-00306)
+  \item International Journal of Modern Physics A, 2 reviews since 2017 % (IJMPA-D-17-00259, IJMPA-D-18-00427)
+\end{tightlistout}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Other professional service} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tightlistout}
+  \item Parallel session chair:                                                                                                                \\
+    \qquad \href{https://web.pa.msu.edu/conf/Lattice2018/}{Lattice 2018} (Physics Beyond the Standard Model)                                   \\
+    \qquad \href{http://wpd.ugr.es/~lattice2017/}{Lattice 2017} (Applications Beyond QCD)                                                      \\
+  \item Organizer, High Energy Theory and Cosmology Seminars, Syracuse U., 2013--2016                                                          \\
+  \item Organizer, High Energy Theory Journal Club, U.~Colorado, 2012--2013                                                                    \\
+  \item Member, USQCD Software Committee, 2013--2016                                                                                           \\
+  \item Contributor to \href{http://www.physics.utah.edu/~detar/milc/}{MIMD Lattice Computation (MILC)} software, 2012
+  \item Amherst College \href{https://www.amherst.edu/campuslife/careers/mentoring}{alumnus mentor}, seven undergraduates mentored, 2013--2017 \\ % Six long-term, one quick
+%  \item \href{http://www.ectstar.eu}{ECT* Trento} Associate, since 2018                                                                        \\ % Haven't yet done anything for this...
+%  \item Ally Physicist on \href{http://lgbtphysicists.org}{lgbtphysicists.org}, since 2016                                                     \\ % Change affiliation before activating
+\end{tightlistout}
+
+\newpage
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Additional training} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tabular}[t]{cl}
+  2016  & Advancing Learning through Evidence-Based STEM Teaching, 1 June--31 July         \\ %Center for the Integration of Research, Teaching, and Learning
+  2015  & An Introduction to Evidence-Based Undergraduate STEM Teaching, 28 Sept.--19 Nov. \\ %Center for the Integration of Research, Teaching, and Learning
+  2009  & Les Houches Summer School in Lattice Gauge Theory, 3--28 August                  \\ %Les Houches, France
+  2007  & CTEQ Summer School on QCD Analysis and Phenomenology, 30 May--7 June             \\ %Madison WI
+  2005  & CERN Summer Students Programme, 6 July--12 August                                \\ %Geneva, Switzerland
+\end{tabular}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Professional memberships} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tightlistout}
+  \item American Physical Society, since 2006
+  \item European Physical Society, since 2018
+  \item Institute of Physics, since 2018
+  \item American Association for the Advancement of Science, since 2013
+  \item Swiss Institute of Particle Physics, since 2016
+  \item Sigma Xi, The Scientific Research Society, since 2006
+  \item Free Software Foundation, since 2010
+\end{tightlistout}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Research} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tightlistout}
+  \item {\bf Application of high-performance computing to particle physics}
+  \item ---Investigations of strongly interacting quantum field theories using lattice gauge theory
+  \item ---Non-perturbative lattice studies of supersymmetric field theories
+  \item ---Quantum chromodynamics at non-zero baryon density
+  \item ---Testing models of dynamical electroweak symmetry breaking and composite dark matter
+%  \item ---Code development for data-parallel computing, and data analysis for physics
+\end{tightlistout}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Technical expertise} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+%\begin{tabular}[t]{ll}
+%  {\bf Programming:} C/C++; Fortran; Java                             & {\bf Scripting:} Perl; Python; Bash/csh \\
+%  {\bf System administration:} UNIX/Linux                             & {\bf Visualization:} VTK; ParaView \\
+%  {\bf Markup:} \TeX{}; \LaTeX{}; B\textsc{ib}\TeX{}; HTML; PHP; SQL  & \ \\
+%\end{tabular}
+\begin{tightlistout}
+  \item {\bf Programming:} C; \ Python; \ Bash; \ Fortran; \ Perl
+  \item {\bf High-performance computing:} MPI-based lattice domain-specific languages (MILC, QDP)
+  \item {\bf System administration:} GNU/Linux
+  \item {\bf Markup \& Web:} \LaTeX{}; \ B\textsc{ib}\TeX{}; \ HTML; \ PHP; \ SQL
+%  \item {\bf Visualization:} VTK; ParaView
+\end{tightlistout}
+
+\spacer
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{Languages} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+English (native); \ Spanish (intermediate/B1); \ German (elementary/A2); \ Welsh (basic/A1)
+% German reading: A2 (Dialang, 14 July 2017, 239184be-ca87-4995-8621-35950044ce6a)
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\newpage
+%\makeheading{Publications \hfill \textnormal{{\footnotesize (1443 citations; \ \href{https://en.wikipedia.org/wiki/H-index}{$h = 23$}; \ \href{https://en.wikipedia.org/wiki/G-index}{$g = 36$}; \ \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/author/profile/D.Schaich.1})}}}
+\makeheading{Publications \hfill \textnormal{{\footnotesize (Convention: authors in alphabetical order)}}} \\[24 pt]
+\input{pubs}
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\newpage
+\makeheading{Grants and computing allocations}
+\input{grants}
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\newpage
+\makeheading{Presentations}
+\input{talks}
+\end{document}
+% ------------------------------------------------------------------
