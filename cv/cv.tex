@@ -56,25 +56,9 @@
      \marginpar{
      \raggedright \scshape #1}#2}
 
-% A basic list with a little space between the lines
-\newenvironment{spacelist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{8 mm}}}{\end{list}}
-
-% A basic list with no space between the lines
-\newenvironment{tightlist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{-3 pt} \setlength{\leftmargin}{8 mm}}}{\end{list}}
-
-% A basic list with no indentation and a little space between the lines
-\newenvironment{spacelistout}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
-
 % A basic list with no indentation or space between the lines
-\newenvironment{tightlistout}
+\newenvironment{tightlist}
   {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{-3 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
-
-% A basic list with a little indentation but still no space between the lines
-\newenvironment{thesislist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{0 pt} \setlength{\leftmargin}{6 mm}}}{\end{list}}
 
 % To add some paragraph space between lines
 % This also tells LaTeX to preferably break a page on one of these gaps if there is a needed pagebreak nearby
@@ -99,7 +83,7 @@
 % The actual content
 \begin{document}
 \raggedright
-\makeheading{David Schaich --- Curriculum vitae \hfill \textnormal{\footnotesize{12 May 2019}}}
+\makeheading{David Schaich --- Curriculum vitae \hfill \textnormal{\footnotesize{4 June 2019}}}
 % ------------------------------------------------------------------
 
 
@@ -168,10 +152,14 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 
 \vspace{-12 pt} % Get things to line up
 \begin{tabular}[t]{cl}
+  2019 & \href{http://www.usqcd.org}{USQCD} computing allocation, 10M core hours                                                                                                                                                   \\ % BNL (KNL)
+       & \textit{Composite Higgs model with four light and six heavy flavors}                                                                                                                                                      \\[6 pt]
+  2019 & USQCD computing allocation, 2.25M core hours                                                                                                                                                                              \\ % Fermilab
+       & \textit{Phases of a Higgs--Yukawa Theory and Symmetric Mass Generation}                                                                                                                                                   \\[6 pt]
   2019 & \href{https://www.ukri.org/funding/funding-opportunities/future-leaders-fellowships/meet-our-future-leaders-fellows/david-schaich-university-of-liverpool/}{UK Research \& Innovation Future Leader Fellowship}, 923k GBP \\
        & \textit{New Frontiers of Lattice Field Theory}                                                                                                                                                                            \\[6 pt]
   2018 & University of Bern Faculty of Science conference travel grant, 1700 CHF                                                                                                                                                   \\[6 pt]
-  2018 & \href{http://www.usqcd.org}{USQCD} computing allocation, 29M core hours                                                                                                                                                   \\ % BNL (KNL)
+  2018 & USQCD computing allocation, 29M core hours                                                                                                                                                                                \\ % BNL (KNL)
        & \textit{Composite Higgs model with four light and six heavy flavors}                                                                                                                                                      \\[6 pt]
   2018 & USQCD computing allocation, 12M core hours                                                                                                                                                                                \\ % Fermilab
        & \textit{Thermodynamics of SYM theory in three and four dimensions}                                                                                                                                                        \\[6 pt]
@@ -183,19 +171,19 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
        & \textit{A new critical point in lattice four-fermion theories?}                                                                                                                                                                                                                                                              \\
 \end{tabular}
 
-%\begin{comment}
+\begin{comment}
 \blankline % !!! Less vertical space
 
 \section{Pending grants} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
 \begin{tabular}[t]{cl}
-  2019  & \textit{Phases of a Higgs--Yukawa Theory and Symmetric Mass Generation} \\ % Fermilab
-        & (2.25M core-hour request submitted to USQCD)                            \\[6 pt]
-  2019  & \textit{Composite Higgs model with four light and six heavy flavors}    \\ % BNL (KNL)
-        & (8.75M core-hour request submitted to USQCD)                            \\
+  2019 & \textit{Phases of a Higgs--Yukawa Theory and Symmetric Mass Generation} \\ % Fermilab
+       & (2.25M core-hour request submitted to USQCD)                            \\[6 pt]
+  2019 & \textit{Composite Higgs model with four light and six heavy flavors}    \\ % BNL (KNL)
+       & (8.75M core-hour request submitted to USQCD)                            \\
 \end{tabular}
-%\end{comment}
+\end{comment}
 
 \spacer
 % ------------------------------------------------------------------
@@ -304,7 +292,7 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 \section{Journal referee} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
-\begin{tightlistout} % publons.com/author/1444034/
+\begin{tightlist} % publons.com/author/1444034/
 %  \item Physical Review Letters, Physical Review D, Journal of High Energy Physics, Physical Review B, Nuclear Physics B, International Journal of Modern Physics A
   \item Physical Review Letters, 7 reviews since 2014
   \item Physical Review D, 5 reviews since 2012
@@ -312,7 +300,7 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
   \item Physical Review B, 4 reviews since 2012
   \item Nuclear Physics B, 1 review since 2014
   \item International Journal of Modern Physics A, 2 reviews since 2017
-\end{tightlistout}
+\end{tightlist}
 
 \spacer
 % ------------------------------------------------------------------
@@ -323,7 +311,7 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 \section{Other professional service} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
-\begin{tightlistout}
+\begin{tightlist}
   \item Parallel session chair:                                                                                                                \\
     \qquad \href{https://web.pa.msu.edu/conf/Lattice2018/}{Lattice 2018} (Physics Beyond the Standard Model)                                   \\
     \qquad \href{http://wpd.ugr.es/~lattice2017/}{Lattice 2017} (Applications Beyond QCD)                                                      \\
@@ -334,7 +322,7 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
   \item Amherst College \href{https://www.amherst.edu/campuslife/careers/mentoring}{alumnus mentor}, seven undergraduates mentored, 2013--2017 \\ % Six long-term, one quick
 %  \item \href{http://www.ectstar.eu}{ECT* Trento} Associate, since 2018                                                                        \\ % Haven't yet done anything for this...
 %  \item Ally Physicist on \href{http://lgbtphysicists.org}{lgbtphysicists.org}, since 2016                                                     \\ % Haven't really done anything for this...
-\end{tightlistout}
+\end{tightlist}
 
 \newpage
 % ------------------------------------------------------------------
@@ -362,7 +350,7 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 \section{Professional memberships} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
-\begin{tightlistout}
+\begin{tightlist}
   \item American Physical Society, since 2006
   \item European Physical Society, since 2018
   \item Institute of Physics, since 2018
@@ -371,7 +359,7 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
   \item Swiss Institute of Particle Physics, since 2016
   \item Sigma Xi, The Scientific Research Society, since 2006
   \item Free Software Foundation, since 2010
-\end{tightlistout}
+\end{tightlist}
 
 \spacer
 % ------------------------------------------------------------------
@@ -382,13 +370,13 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 \section{Research} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
-\begin{tightlistout}
+\begin{tightlist}
   \item \textbf{Application of high-performance computing to particle physics}
   \item ---Investigations of strongly interacting quantum field theories using lattice gauge theory
   \item ---Non-perturbative lattice studies of supersymmetric field theories
   \item ---Quantum chromodynamics at non-zero baryon density
   \item ---Testing models of dynamical electroweak symmetry breaking and composite dark matter
-\end{tightlistout}
+\end{tightlist}
 
 \spacer
 % ------------------------------------------------------------------
@@ -399,13 +387,13 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 \section{Technical expertise} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
-\begin{tightlistout}
+\begin{tightlist}
   \item \textbf{Programming:} C; \ Python; \ Bash; \ Fortran; \ Perl
   \item \textbf{High-performance computing:} MPI-based lattice domain-specific languages (MILC, QDP)
   \item \textbf{Version control:} git; svn
   \item \textbf{System administration:} GNU/Linux
   \item \textbf{Markup \& Web:} \LaTeX{}; \ B\textsc{ib}\TeX{}; \ HTML; \ PHP; \ SQL
-\end{tightlistout}
+\end{tightlist}
 
 \spacer
 % ------------------------------------------------------------------
