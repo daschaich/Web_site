@@ -8,13 +8,10 @@
 % Put the section titles on left side of page
 \reversemarginpar
 
-% Page geometry
-\usepackage[paper=letterpaper,
-            %includefoot,         % Uncomment to put page number above margin
-            marginparwidth=1 in,  % Length of section titles
-            marginparsep=0.15 in,  % Space between titles and text
-            margin=0.75 in,
-            includemp]{geometry}
+% Page geometry -- marginparwidth sets length of section titles,
+%                  while marginparsep sets space between titles and text
+%\usepackage[paper=letterpaper, marginparwidth=1 in, marginparsep=0.15 in, margin=0.75 in, includemp]{geometry}
+\usepackage[paper=a4paper, marginparwidth=1 in, marginparsep=0.15 in, margin=0.62 in, includemp]{geometry}
 
 \usepackage[none]{hyphenat}
 \sloppy
@@ -59,25 +56,13 @@
      \marginpar{
      \raggedright \scshape #1}#2}
 
-% A basic list with a little space between the lines
-\newenvironment{spacelist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{8 mm}}}{\end{list}}
-
-% A basic list with no space between the lines
-\newenvironment{tightlist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{-3 pt} \setlength{\leftmargin}{8 mm}}}{\end{list}}
-
-% A basic list with no indentation and a little space between the lines
-\newenvironment{spacelistout}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
-
 % A basic list with no indentation or space between the lines
-\newenvironment{tightlistout}
+\newenvironment{tightlist}
   {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{-3 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
 
-% A basic list with a little indentation but still no space between the lines
-\newenvironment{thesislist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{0 pt} \setlength{\leftmargin}{6 mm}}}{\end{list}}
+% A basic list with no indentation and a little space between the lines
+\newenvironment{spacelist}
+  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
 
 % To add some paragraph space between lines
 % This also tells LaTeX to preferably break a page on one of these gaps if there is a needed pagebreak nearby

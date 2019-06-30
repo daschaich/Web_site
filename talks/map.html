@@ -22,7 +22,40 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 72;
+    var rank = 75;
+
+    // 75, Lattice1906
+    var Lattice1906Loc  = new google.maps.LatLng(30.5388, 114.2740);
+    var Lattice1906Name = 'Stealth dark matter and gravitational waves';
+    var Lattice1906Date = '19 June 2019';
+    var Lattice1906Text = '<em><a href="1906Lattice.pdf">' + Lattice1906Name + '</a></em>, Lattice 2019, Wuhan, China, ' + Lattice1906Date;
+    var Lattice1906Mark = new google.maps.Marker({ map: map, position: Lattice1906Loc, icon: icon, zIndex: rank, title:Lattice1906Name + ' (' + Lattice1906Date + ')' });
+    var Lattice1906Info = new google.maps.InfoWindow({ content: Lattice1906Text, maxWidth: 300 });
+    google.maps.event.addListener(Lattice1906Mark, 'click', function() { Lattice1906Info.open(map, Lattice1906Mark); });
+    if (name=='Lattice1906') { Lattice1906Info.open(map, Lattice1906Mark); }
+    rank--;
+
+    // 74, Lattice1906poster
+    var Lattice1906posterLoc  = new google.maps.LatLng(30.5388, 114.2739);
+    var Lattice1906posterName = 'Thermal phase structure of a supersymmetric matrix model';
+    var Lattice1906posterDate = '18 June 2019';
+    var Lattice1906posterText = '<em><a href="1906Lattice-poster.pdf">' + Lattice1906posterName + '</a></em>, Lattice 2019, Wuhan, China, ' + Lattice1906posterDate;
+    var Lattice1906posterMark = new google.maps.Marker({ map: map, position: Lattice1906posterLoc, icon: poster_icon, zIndex: rank, title:Lattice1906posterName + ' (' + Lattice1906posterDate + ')' });
+    var Lattice1906posterInfo = new google.maps.InfoWindow({ content: Lattice1906posterText, maxWidth: 300 });
+    google.maps.event.addListener(Lattice1906posterMark, 'click', function() { Lattice1906posterInfo.open(map, Lattice1906posterMark); });
+    if (name=='Lattice1906poster') { Lattice1906posterInfo.open(map, Lattice1906posterMark); }
+    rank--;
+
+    // 73, ECT1906
+    var ECT1906Loc  = new google.maps.LatLng(46.0438, 11.1406);
+    var ECT1906Name = 'Supersymmetric lattice field theories: Classical simulations and quantum opportunities';
+    var ECT1906Date = '12 June 2019';
+    var ECT1906Text = '<em><a href="1906ECT.pdf">' + ECT1906Name + '</a></em>, Workshop on High-energy Physics at Ultra-cold Temperatures, ECT* Trento, ' + ECT1906Date;
+    var ECT1906Mark = new google.maps.Marker({ map: map, position: ECT1906Loc, icon: invited_icon, zIndex: rank, title:ECT1906Name + ' (' + ECT1906Date + ')' });
+    var ECT1906Info = new google.maps.InfoWindow({ content: ECT1906Text, maxWidth: 300 });
+    google.maps.event.addListener(ECT1906Mark, 'click', function() { ECT1906Info.open(map, ECT1906Mark); });
+    if (name=='ECT1906') { ECT1906Info.open(map, ECT1906Mark); }
+    rank--;
 
     // 72, Liverpool1811
     var Liverpool1811Loc  = new google.maps.LatLng(53.4050, -2.9653);
@@ -836,7 +869,7 @@
 </script>
 <title>David Schaich -- Liverpool Theoretical Physics</title>
 </head>
-<body onload="initialize(46.9512, 7.4389, 2, 'none')"> <!--Centered on Bern-->
+<body onload="initialize(53.4050, -2.9653, 2, 'none')"> <!--Centered on Liverpool-->
 <div id="main">
 <a href="../index.html">Main</a> / <a href="index.html">Presentations</a> / <b>Map</b>
 
@@ -851,6 +884,10 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(30.5388, 114.2740, 8, 'Lattice1906')"><em>Stealth dark matter and gravitational waves</em>, Lattice 2019, Wuhan, China, 19 June 2019</a></td>
+    <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(30.5388, 114.2739, 8, 'Lattice1906poster')"><em>Thermal phase structure of a supersymmetric matrix model</em>, Lattice 2019, Wuhan, China, 18 June 2019</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(46.0438, 11.1406, 8, 'ECT1906')"><em>Supersymmetric lattice field theories: Classical simulations and quantum opportunities</em>, Workshop on High-energy Physics at Ultra-cold Temperatures, ECT* Trento, 12 June 2019</a></td>
+  </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(53.4050, -2.9653, 8, 'Liverpool1811')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, University of Liverpool Theoretical Physics Seminar, 28 November 2018</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(51.6088, -3.9821, 8, 'Swansea1811')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, Swansea University Theory Seminar, 23 November 2018</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(58.9378, 5.6916, 8, 'Stavanger1811')"><em>Composite dark matter and the role of lattice field theory</em>, University of Stavanger Physics Seminar, 1 November 2018</a></td>
@@ -896,7 +933,7 @@
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(40.4301, -86.9131, 8, 'Purdue1504')"><em>Strong Dynamics and Lattice Gauge Theory: Going Beyond QCD</em>, Purdue High Energy Theory Seminar, 7 April 2015</a></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(35.1571, 136.9671, 8, 'SCGT15')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, Origin of Mass and Strong Coupling Gauge Theories, Kobayashi&ndash;Maskawa Institute, Nagoya University, 5 March 2015</a></td>
-    <td><img src="poster_marker.png" alt="talk" height=20><a onclick="initialize(35.1571, 136.9669, 8, 'SCGTposter')"><em>Finite-temperature study of eight-flavor SU(3) gauge theory</em>, Origin of Mass and Strong Coupling Gauge Theories, Kobayashi&ndash;Maskawa Institute, Nagoya University, 3 March 2015</a></td>
+    <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(35.1571, 136.9669, 8, 'SCGTposter')"><em>Finite-temperature study of eight-flavor SU(3) gauge theory</em>, Origin of Mass and Strong Coupling Gauge Theories, Kobayashi&ndash;Maskawa Institute, Nagoya University, 3 March 2015</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(41.3174, -72.9233, 8, 'Yale1502')"><em>N=4 supersymmetric Yang&ndash;Mills on a space-time lattice</em>, Yale Particle Theory Seminar, 10 February 2015</a></td>
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(40.8101, -73.9614, 8, 'Lattice14')"><em>Results from lattice studies of maximally supersymmetric Yang&ndash;Mills</em>, Lattice 2014, Columbia University, 25 June 2014</a></td>
@@ -950,7 +987,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 18 March 2019</p>
+<p class="left">Last modified 30 June 2019</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>

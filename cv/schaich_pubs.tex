@@ -56,25 +56,13 @@
      \marginpar{
      \raggedright \scshape #1}#2}
 
-% A basic list with a little space between the lines
-\newenvironment{spacelist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{8 mm}}}{\end{list}}
-
-% A basic list with no space between the lines
-\newenvironment{tightlist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{-3 pt} \setlength{\leftmargin}{8 mm}}}{\end{list}}
-
-% A basic list with no indentation and a little space between the lines
-\newenvironment{spacelistout}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
-
 % A basic list with no indentation or space between the lines
-\newenvironment{tightlistout}
+\newenvironment{tightlist}
   {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{-3 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
 
-% A basic list with a little indentation but still no space between the lines
-\newenvironment{thesislist}
-  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{0 pt} \setlength{\leftmargin}{6 mm}}}{\end{list}}
+% A basic list with no indentation and a little space between the lines
+\newenvironment{spacelist}
+  {\begin{list} {} {\setlength{\topsep}{-8 pt} \setlength{\itemsep}{5 pt} \setlength{\leftmargin}{0 mm}}}{\end{list}}
 
 % To add some paragraph space between lines
 % This also tells LaTeX to preferably break a page on one of these gaps if there is a needed pagebreak nearby
