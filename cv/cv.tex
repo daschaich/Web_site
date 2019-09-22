@@ -5,6 +5,10 @@
 \usepackage{calc}
 \usepackage{revnum}
 
+% For Chinese characters
+\usepackage{CJKutf8}
+\AtBeginDvi{\input{zhwinfonts}}
+
 % Put the section titles on left side of page
 \reversemarginpar
 
@@ -87,7 +91,7 @@
 % The actual content
 \begin{document}
 \raggedright
-\makeheading{David Schaich --- Curriculum vitae \hfill \textnormal{\footnotesize{30 June 2019}}}
+\makeheading{David Schaich --- Curriculum vitae \hfill \textnormal{\footnotesize{22 September 2019}}}
 % ------------------------------------------------------------------
 
 
@@ -95,8 +99,8 @@
 % ------------------------------------------------------------------
 \section{Contact}
 \begin{tabular}[t]{ll}
-  Department of Mathematical Sciences \hspace{1 cm} & +44 (0)151 794 3778 (Office)                                               \\
-  University of Liverpool                           & +44 (0)7568 168895 (Mobile)                                                \\
+  Department of Mathematical Sciences \hspace{1 cm} & +44 151 794 3778 (Office)                                                  \\
+  University of Liverpool                           & +44 7568 168895 (Mobile)                                                   \\
   Liverpool L69 7ZL                                 & Skype: daschaich                                                           \\ % Ekiga: schaich
   United Kingdom                                    & \href{mailto:david.schaich@liverpool.ac.uk}{david.schaich@liverpool.ac.uk} \\
   \url{http://www.davidschaich.net}                 &                                                                            \\
@@ -143,7 +147,7 @@
 \section{Publication metrics} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
-57 papers; \ 1455 citations; \ \href{https://en.wikipedia.org/wiki/H-index}{$h = 23$}; \ \href{https://en.wikipedia.org/wiki/G-index}{$g = 36$} \\[1 pt]
+57 publications; \ 1483 citations; \ \href{https://en.wikipedia.org/wiki/H-index}{$h = 23$}; \ \href{https://en.wikipedia.org/wiki/G-index}{$g = 37$} \\[1 pt]
 See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/author/profile/D.Schaich.1}
 
 \spacer
@@ -239,10 +243,10 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 \section{Teaching} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
-\begin{tabular}[t]{cl}
-  Fall 2017  & \href{http://www.davidschaich.net/teaching/1718F_BSM/index.html}{New strong dynamics beyond the standard model} (graduate), U.~Bern      \\
-  2013--2014 & \href{http://www.davidschaich.net/teaching/1314_AdQFT/index.html}{Advanced quantum field theory} (graduate, informal), Syracuse U. \\
-  2012--2013 & \href{http://www.davidschaich.net/teaching/1213_AdQFT/index.html}{Advanced Quantum Field Theory} (graduate, informal), U.~Colorado \\
+\begin{tabular}[t]{ll}
+  2017 Autumn & \href{http://www.davidschaich.net/teaching/1718F_BSM/index.html}{New strong dynamics beyond the standard model} (graduate), U.~Bern \\
+  2013--2014  & \href{http://www.davidschaich.net/teaching/1314_AdQFT/index.html}{Advanced quantum field theory} (graduate, informal), Syracuse U.  \\
+  2012--2013  & \href{http://www.davidschaich.net/teaching/1213_AdQFT/index.html}{Advanced Quantum Field Theory} (graduate, informal), U.~Colorado  \\
 \end{tabular}
 
 \spacer
@@ -255,15 +259,18 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 
 \vspace{-12 pt} % Get things to line up
 \begin{tabular}[t]{cl}
-  2018  & \href{http://www.ectstar.eu/node/4226}{Interdisciplinary approach to QCD-like composite dark matter}                                                                        \\
-        & ECT* Trento, 1--5 October                                                                                                                                                   \\[6 pt]
-  2018  & \href{https://higgs.ph.ed.ac.uk/workshops/numerical-approaches-holography-quantum-gravity-and-cosmology}{Numerical approaches to holography, quantum gravity and cosmology} \\
-        & Higgs Centre for Theoretical Physics, University of Edinburgh, 21--24 May                                                                                                   \\[6 pt]
-  2014  & \href{http://blogs.bu.edu/ppcm/}{Field Theoretic Computer Simulations for Particle Physics and Condensed Matter}                                                            \\
-        & Boston University, 8--10 May                                                                                                                                                \\[6 pt]
-  2012  & \href{http://www-hep.colorado.edu/~schaich/lat-exp-2012/}{Lattice Meets Experiment: Beyond the Standard Model}, U.~Colorado, 26--27 October                                 \\[6 pt]
-  2010  & \href{http://www-hep.colorado.edu/~schaich/QCDNA6/}{QCDNA6: Numerical Analysis for Lattice Gauge Theory}, Boston U., 8--10 September                                        \\[6 pt]
-  2009  & \href{http://www-hep.colorado.edu/~schaich/LGTforLHC2009/}{Lattice Gauge Theory for LHC Physics}, Boston University, 6--7 November                                          \\
+  2021 & Nonperturbative and Numerical Approaches                                                                                                                                    \\
+       & \hfill to Quantum Gravity, String Theory and Holography                                                                                                                     \\
+       & International Centre for Theoretical Sciences, Bangalore, 18--29 January                                                                                                    \\[6 pt]
+  2018 & \href{http://www.ectstar.eu/node/4226}{Interdisciplinary approach to QCD-like composite dark matter}                                                                        \\
+       & ECT* Trento, 1--5 October                                                                                                                                                   \\[6 pt]
+  2018 & \href{https://higgs.ph.ed.ac.uk/workshops/numerical-approaches-holography-quantum-gravity-and-cosmology}{Numerical approaches to holography, quantum gravity and cosmology} \\
+       & Higgs Centre for Theoretical Physics, University of Edinburgh, 21--24 May                                                                                                   \\[6 pt]
+  2014 & \href{http://blogs.bu.edu/ppcm/}{Field Theoretic Computer Simulations for Particle Physics and Condensed Matter}                                                            \\
+       & Boston University, 8--10 May                                                                                                                                                \\[6 pt]
+  2012 & \href{http://www.maths.liv.ac.uk/TheorPhys/people/staff/schaich/lat-exp-2012/}{Lattice Meets Experiment: Beyond the Standard Model}, U.~Colorado, 26--27 October                                 \\[6 pt]
+  2010 & \href{http://www.maths.liv.ac.uk/TheorPhys/people/staff/schaich/QCDNA6/}{QCDNA6: Numerical Analysis for Lattice Gauge Theory}, Boston U., 8--10 September                                        \\[6 pt]
+  2009 & \href{http://www.maths.liv.ac.uk/TheorPhys/people/staff/schaich/LGTforLHC2009/}{Lattice Gauge Theory for LHC Physics}, Boston University, 6--7 November                                          \\
 \end{tabular}
 
 \spacer
@@ -276,7 +283,7 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 
 \vspace{-12 pt} % Get things to line up
 \begin{tabular}[t]{cl}
-  2019 & Harry Lee, \textit{Quantum Computing} (second reader, advisor: Paul Rakow) \\
+  2019 Spring & Harry Lee, \textit{Quantum Computing} (second reader, advisor: Paul Rakow) \\
 \end{tabular}
 
 \spacer
@@ -290,6 +297,7 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 
 \vspace{-12 pt} % Get things to line up
 \begin{tabular}[t]{cl}
+  2016--2019    & Nouman Butt (advisor: Simon Catterall), Syracuse University           \\[6 pt]
   2014--2019    & Raghav Jha (advisor: Simon Catterall), Syracuse University            \\
                 & \qquad \lra Postdoc (Perimeter)                                       \\[6 pt]
   2013--2015    & Aarti Veernala (advisor: Simon Catterall), Syracuse University        \\
@@ -316,10 +324,24 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
   \item Journal of High Energy Physics, 2 reviews since 2017
   \item Physical Review B, 4 reviews since 2012
   \item Nuclear Physics B, 1 review since 2014
-  \item International Journal of Modern Physics A, 2 reviews since 2017
+  \item International Journal of Modern Physics A, 3 reviews since 2017
 \end{tightlist}
 
 \newpage
+% ------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------
+\section{U.~Liverpool service} % The next line must be blank!
+
+\vspace{-12 pt} % Get things to line up
+\begin{tightlist}
+  \item Fixed-term Lecturer search committee member, 2019                       \\
+  \item Independent Progress Assessment Panel member for two PhD students, 2019 \\
+\end{tightlist}
+
+\spacer
 % ------------------------------------------------------------------
 
 
@@ -351,11 +373,12 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 
 \vspace{-12 pt} % Get things to line up
 \begin{tabular}[t]{cl}
-  2016  & Advancing Learning through Evidence-Based STEM Teaching, 1 June--31 July         \\ %Center for the Integration of Research, Teaching, and Learning
-  2015  & An Introduction to Evidence-Based Undergraduate STEM Teaching, 28 Sept.--19 Nov. \\ %Center for the Integration of Research, Teaching, and Learning
-  2009  & Les Houches Summer School in Lattice Gauge Theory, 3--28 August                  \\ %Les Houches, France
-  2007  & CTEQ Summer School on QCD Analysis and Phenomenology, 30 May--7 June             \\ %Madison WI
-  2005  & CERN Summer Students Programme, 6 July--12 August                                \\ %Geneva, Switzerland
+  2021 & Postgraduate Certificate in Academic Practice, September 2019 through May 2021   \\ %University of Liverpool
+  2016 & Advancing Learning through Evidence-Based STEM Teaching, 1 June--31 July         \\ %Center for the Integration of Research, Teaching, and Learning
+  2015 & An Introduction to Evidence-Based Undergraduate STEM Teaching, 28 Sept.--19 Nov. \\ %Center for the Integration of Research, Teaching, and Learning
+  2009 & Les Houches Summer School in Lattice Gauge Theory, 3--28 August                  \\ %Les Houches, France
+  2007 & CTEQ Summer School on QCD Analysis and Phenomenology, 30 May--7 June             \\ %Madison WI
+  2005 & CERN Summer Students Programme, 6 July--12 August                                \\ %Geneva, Switzerland
 \end{tabular}
 
 \spacer
@@ -388,11 +411,12 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 
 \vspace{-12 pt} % Get things to line up
 \begin{tightlist}
-  \item \textbf{Application of high-performance computing to particle physics}
+  \item \textbf{Applications of computing to particle physics}
   \item ---Investigations of strongly interacting quantum field theories using lattice gauge theory
   \item ---Non-perturbative lattice studies of supersymmetric field theories
-  \item ---Quantum chromodynamics at non-zero baryon density
   \item ---Testing models of dynamical electroweak symmetry breaking and composite dark matter
+  \item ---Quantum simulation of real-time dynamics in simple quantum systems
+%  \item ---Quantum chromodynamics at non-zero baryon density
 \end{tightlist}
 
 \spacer
@@ -421,14 +445,14 @@ See also \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/
 \section{Languages} % The next line must be blank!
 
 \vspace{-12 pt} % Get things to line up
-English (native); \ Spanish (intermediate/B1); \ German (elementary/A2); \ Welsh (basic/A1)
+English (native); \ Spanish (intermediate/B1); \ German (elementary/A2); \ Welsh (basic/A1); \ Esperanto (basic/A1); \ Chinese (\begin{CJK*}{UTF8}{gbsn}普通话\end{CJK*}, beginner/A0)
 % ------------------------------------------------------------------
 
 
 
 % ------------------------------------------------------------------
 \newpage
-%\makeheading{Publications \hfill \textnormal{{\footnotesize (1455 citations; \ \href{https://en.wikipedia.org/wiki/H-index}{$h = 23$}; \ \href{https://en.wikipedia.org/wiki/G-index}{$g = 36$}; \ \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/author/profile/D.Schaich.1})}}}
+%\makeheading{Publications \hfill \textnormal{{\footnotesize (1488 citations; \ \href{https://en.wikipedia.org/wiki/H-index}{$h = 23$}; \ \href{https://en.wikipedia.org/wiki/G-index}{$g = 37$}; \ \href{http://inspirehep.net/author/profile/D.Schaich.1}{inspirehep.net/author/profile/D.Schaich.1})}}}
 \makeheading{Publications \hfill \textnormal{{\footnotesize (Convention: authors in alphabetical order)}}} \\[24 pt]
 \input{pubs}
 % ------------------------------------------------------------------

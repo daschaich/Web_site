@@ -22,7 +22,29 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 75;
+    var rank = 77;
+
+    // 77, UKRI1909
+    var UKRI1909Loc  = new google.maps.LatLng(51.4935, -0.1835);
+    var UKRI1909Name = 'New Frontiers of Lattice Field Theory';
+    var UKRI1909Date = '17 September 2019';
+    var UKRI1909Text = '<em><a href="1909UKRI.pdf">' + UKRI1909Name + '</a></em>, UK Research and Innovation Future Leaders Cohort Event, London, ' + UKRI1909Date;
+    var UKRI1909Mark = new google.maps.Marker({ map: map, position: UKRI1909Loc, icon: poster_icon, zIndex: rank, title:UKRI1909Name + ' (' + UKRI1909Date + ')' });
+    var UKRI1909Info = new google.maps.InfoWindow({ content: UKRI1909Text, maxWidth: 300 });
+    google.maps.event.addListener(UKRI1909Mark, 'click', function() { UKRI1909Info.open(map, UKRI1909Mark); });
+    if (name=='UKRI1909') { UKRI1909Info.open(map, UKRI1909Mark); }
+    rank--;
+
+    // 76, Ignite1908
+    var Ignite1908Loc  = new google.maps.LatLng(53.4029, -2.9776);
+    var Ignite1908Name = 'The Dark Side of the Universe';
+    var Ignite1908Date = '19 August 2019';
+    var Ignite1908Text = '<em><a href="1908Ignite.pdf">' + Ignite1908Name + '</a></em>, Ignite Liverpool, ' + Ignite1908Date;
+    var Ignite1908Mark = new google.maps.Marker({ map: map, position: Ignite1908Loc, icon: icon, zIndex: rank, title:Ignite1908Name + ' (' + Ignite1908Date + ')' });
+    var Ignite1908Info = new google.maps.InfoWindow({ content: Ignite1908Text, maxWidth: 300 });
+    google.maps.event.addListener(Ignite1908Mark, 'click', function() { Ignite1908Info.open(map, Ignite1908Mark); });
+    if (name=='Ignite1908') { Ignite1908Info.open(map, Ignite1908Mark); }
+    rank--;
 
     // 75, Lattice1906
     var Lattice1906Loc  = new google.maps.LatLng(30.5388, 114.2740);
@@ -884,6 +906,10 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
+    <td></td>
+    <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(51.4935, -0.1835, 8, 'UKRI1909')"><em>New Frontiers of Lattice Field Theory</em>, UK Research and Innovation Future Leaders Cohort Event, London, 17 September 2019</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(53.4029, -2.9776, 8, 'Ignite1908')"><em>The Dark Side of the Universe</em>, Ignite Liverpool, 19 August 2019</a></td>
+  </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(30.5388, 114.2740, 8, 'Lattice1906')"><em>Stealth dark matter and gravitational waves</em>, Lattice 2019, Wuhan, China, 19 June 2019</a></td>
     <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(30.5388, 114.2739, 8, 'Lattice1906poster')"><em>Thermal phase structure of a supersymmetric matrix model</em>, Lattice 2019, Wuhan, China, 18 June 2019</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(46.0438, 11.1406, 8, 'ECT1906')"><em>Supersymmetric lattice field theories: Classical simulations and quantum opportunities</em>, Workshop on High-energy Physics at Ultra-cold Temperatures, ECT* Trento, 12 June 2019</a></td>
@@ -987,7 +1013,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 30 June 2019</p>
+<p class="left">Last modified 17 September 2019</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
