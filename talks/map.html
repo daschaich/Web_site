@@ -22,7 +22,40 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 77;
+    var rank = 80;
+
+    // 80, Perimeter2001
+    var Perimeter2001Loc  = new google.maps.LatLng(43.4654, -80.5277);
+    var Perimeter2001Name = 'Lattice studies of maximally supersymmetric Yang&ndash;Mills theories';
+    var Perimeter2001Date = '10 January 2020';
+    var Perimeter2001Text = '<em><a href="2001Perimeter.pdf">' + Perimeter2001Name + '</a></em>, Perimeter Institute Quantum Fields and Strings Seminar, ' + Perimeter2001Date;
+    var Perimeter2001Mark = new google.maps.Marker({ map: map, position: Perimeter2001Loc, icon: invited_icon, zIndex: rank, title:Perimeter2001Name + ' (' + Perimeter2001Date + ')' });
+    var Perimeter2001Info = new google.maps.InfoWindow({ content: Perimeter2001Text, maxWidth: 300 });
+    google.maps.event.addListener(Perimeter2001Mark, 'click', function() { Perimeter2001Info.open(map, Perimeter2001Mark); });
+    if (name=='Perimeter2001') { Perimeter2001Info.open(map, Perimeter2001Mark); }
+    rank--;
+
+    // 79, Soton1911_DM
+    var Soton1911_DMLoc  = new google.maps.LatLng(50.9348, -1.3997);
+    var Soton1911_DMName = 'Lattice field theory for composite dark matter';
+    var Soton1911_DMDate = '29 November 2019';
+    var Soton1911_DMText = '<em><a href="1911Soton_DM.pdf">' + Soton1911_DMName + '</a></em>, University of Southampton High Energy Theory Seminar, ' + Soton1911_DMDate;
+    var Soton1911_DMMark = new google.maps.Marker({ map: map, position: Soton1911_DMLoc, icon: invited_icon, zIndex: rank, title:Soton1911_DMName + ' (' + Soton1911_DMDate + ')' });
+    var Soton1911_DMInfo = new google.maps.InfoWindow({ content: Soton1911_DMText, maxWidth: 300 });
+    google.maps.event.addListener(Soton1911_DMMark, 'click', function() { Soton1911_DMInfo.open(map, Soton1911_DMMark); });
+    if (name=='Soton1911_DM') { Soton1911_DMInfo.open(map, Soton1911_DMMark); }
+    rank--;
+
+    // 78, Soton1911_susy
+    var Soton1911_susyLoc  = new google.maps.LatLng(50.9362, -1.3990);
+    var Soton1911_susyName = 'Maximally supersymmetric Yang&ndash;Mills on the lattice';
+    var Soton1911_susyDate = '27 November 2019';
+    var Soton1911_susyText = '<em><a href="1911Soton_susy.pdf">' + Soton1911_susyName + '</a></em>, University of Southampton String Theory Seminar, ' + Soton1911_susyDate;
+    var Soton1911_susyMark = new google.maps.Marker({ map: map, position: Soton1911_susyLoc, icon: invited_icon, zIndex: rank, title:Soton1911_susyName + ' (' + Soton1911_susyDate + ')' });
+    var Soton1911_susyInfo = new google.maps.InfoWindow({ content: Soton1911_susyText, maxWidth: 300 });
+    google.maps.event.addListener(Soton1911_susyMark, 'click', function() { Soton1911_susyInfo.open(map, Soton1911_susyMark); });
+    if (name=='Soton1911_susy') { Soton1911_susyInfo.open(map, Soton1911_susyMark); }
+    rank--;
 
     // 77, UKRI1909
     var UKRI1909Loc  = new google.maps.LatLng(51.4935, -0.1835);
@@ -907,6 +940,10 @@
 
 <table style="font-size:80%"><tr>
     <td></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(43.4654, -80.5277, 8, 'Perimeter2001')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, Perimeter Institute Quantum Fields and Strings Seminar, 10 January 2020</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9348, -1.3997, 8, 'Soton1911_DM')"><em>Lattice field theory for composite dark matter</em>, University of Southampton High Energy Theory Seminar, 29 November 2019</a></td>
+  </tr><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9362, -1.3990, 8, 'Soton1911_susy')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, University of Southampton String Theory Seminar, 27 November 2019</a></td>
     <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(51.4935, -0.1835, 8, 'UKRI1909')"><em>New Frontiers of Lattice Field Theory</em>, UK Research and Innovation Future Leaders Cohort Event, London, 17 September 2019</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(53.4029, -2.9776, 8, 'Ignite1908')"><em>The Dark Side of the Universe</em>, Ignite Liverpool, 19 August 2019</a></td>
   </tr><tr>
@@ -1013,7 +1050,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 17 September 2019</p>
+<p class="left">Last modified 7 July 2020</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
