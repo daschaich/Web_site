@@ -22,7 +22,18 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 80;
+    var rank = 81;
+
+    // 81, UKRI2010
+    var UKRI2010Loc  = new google.maps.LatLng(51.5669, -1.7852);
+    var UKRI2010Name = 'Advancing New Frontiers of Lattice Field Theory';
+    var UKRI2010Date = '14 October 2020';
+    var UKRI2010Text = '<em><a href="2010UKRI.html">' + UKRI2010Name + '</a></em>, UK Research and Innovation Future Leaders Fellowships Conference, remote, ' + UKRI2010Date;
+    var UKRI2010Mark = new google.maps.Marker({ map: map, position: UKRI2010Loc, icon: poster_icon, zIndex: rank, title:UKRI2010Name + ' (' + UKRI2010Date + ')' });
+    var UKRI2010Info = new google.maps.InfoWindow({ content: UKRI2010Text, maxWidth: 300 });
+    google.maps.event.addListener(UKRI2010Mark, 'click', function() { UKRI2010Info.open(map, UKRI2010Mark); });
+    if (name=='UKRI2010') { UKRI2010Info.open(map, UKRI2010Mark); }
+    rank--;
 
     // 80, Perimeter2001
     var Perimeter2001Loc  = new google.maps.LatLng(43.4654, -80.5277);
@@ -939,7 +950,7 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
-    <td></td>
+    <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(51.5669, -1.7852, 8, 'UKRI2010')"><em>Advancing New Frontiers of Lattice Field Theory</em>, UK Research and Innovation Future Leaders Fellowships Conference, remote, 14 October 2020</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(43.4654, -80.5277, 8, 'Perimeter2001')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, Perimeter Institute Quantum Fields and Strings Seminar, 10 January 2020</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9348, -1.3997, 8, 'Soton1911_DM')"><em>Lattice field theory for composite dark matter</em>, University of Southampton High Energy Theory Seminar, 29 November 2019</a></td>
   </tr><tr>
