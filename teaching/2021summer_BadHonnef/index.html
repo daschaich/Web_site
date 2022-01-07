@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>David Schaich -- Liverpool Physics</title>
+<link rel="stylesheet" media="all" title="Basic style" href="../../basic.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="main">
+<a href="../../index.html">Main</a> / <a href="../index.html">Teaching</a> / <b>Lattice Field Theory Algorithms</b>
+
+<h3>Lattice Field Theory Algorithms, Summer 2021</h3>
+
+<p class="indent">The capabilities and reliability of numerical lattice field theory calculations depend on the algorithms available.  The progress and achievements of lattice field theory over the past several decades have both exploited and driven algorithmic advances, with ongoing work crucial to efficiently use upcoming exascale computing platforms.  This short course, delivered to graduate students and postdocs with a broad range of interests as part of the July 2021 Bad Honnef Physics School, <a href="https://www.dpg-physik.de/veranstaltungen/2020/methods-of-effective-field-theory-and-lattice-field-theory">Methods of Effective Field Theory and Lattice Field Theory</a>, provides an introductory overview of the main algorithmic concepts and tools used by modern lattice field theory.</p>
+
+<p class="indent"><b>Part 1 (14 July):</b> <a href="https://www.youtube.com/watch?v=6g71weLdo_I">Recording</a> and <a href="part1.pdf">slides</a><br>
+Monte Carlo importance sampling; Markov chains; Equilibration; Auto-correlation; Critical slowing down; Parallelization and strong scaling; Pseudofermions; Molecular dynamics; Hybrid Monte Carlo</p>
+
+<p class="indent"><b>Part 2 (16 July):</b> <a href="https://www.youtube.com/watch?v=hL39BhNOt60">Recording</a> and <a href="part2.pdf">slides</a><br>
+Hybrid Monte Carlo; Testing and optimizing molecular dynamics integrators; Mass preconditioning; Nth-root trick; Rational hybrid Monte Carlo; Conjugate gradient inversions; Mixed precision; Adaptive multigrid<br>
+Skipped for lack of time: Sign problems; Phase reweighting; Complex Langevin; Lefschetz thimbles and generalized manifolds; Density of states; Tensor networks; Quantum computing<p>
+
+<p class="indent"><b>Exercises:</b> In addition to a few derivations flagged in the slides, the core exercises for this course involve writing and/or testing both a hybrid Monte Carlo code for three-dimensional scalar field theory, as well as a conjugate gradient algorithm.  Those who already have a preferred codebase are welcome to use it for these exercises.  Alternately, optional template code and model solutions are provided through <a href="https://github.com/daschaich/BadHonnef">this git repository</a>.  Depending on expertise and interest, you can either write these codes from scratch, or just use the model solutions to carry out the suggested tests and experiments.</p>
+
+<h3>Additional resources</h3>
+<p>The topic of algorithms for lattice field theory is far too broad to be covered in any detail in just a few hours.  In addition to overlap with other courses at this school, there any many excellent resources providing entry points for further investigation.  Here is a small sample.</p>
+
+<p>Textbooks:</p>
+<ul style="margin-top:-12px;">
+  <li>M. E. J. Newman and G. T. Barkema, <a href="https://global.oup.com/academic/product/monte-carlo-methods-in-statistical-physics-9780198517979"><em>Monte Carlo Methods in Statistical Physics</em></a> (1999)</li>
+  <li>Tom DeGrand and Carleton DeTar, <a href="https://doi.org/10.1142/6065"><em>Lattice Methods for Quantum Chromodynamics</em></a> (2006)</li>
+  <li>Christof Gattringer and Christian B. Lang, <a href="https://doi.org/10.1007/978-3-642-01850-3"><em>Quantum Chromodynamics on the Lattice</em></a> (2010)</li>
+  <li>Francesco Knechtli, Michael G&uuml;nther and Michael Peardon, <a href="https://doi.org/10.1007/978-94-024-0999-4"><em>Lattice Quantum Chromodynamics</em></a> (2017)</li>
+</ul>
+
+<p>Lecture notes:</p>
+<ul style="margin-top:-12px;">
+  <li>Les Houches Summer School, <a href="https://doi.org/10.1093/acprof:oso/9780199691609.001.0001"><em>Modern perspectives in lattice QCD</em></a> (2009)</li>
+  <li>Tony Kennedy, <a href="https://arxiv.org/abs/hep-lat/0607038"><em>Algorithms for Dynamical Fermions</em></a> (2012)</li>
+  <li>Anosh Joseph, <a href="https://arxiv.org/abs/1912.10997"><em>Markov Chain Monte Carlo Methods in Quantum Field Theories</em></a> (2020)</li>
+</ul>
+
+<p>Finally, the <a href="https://indico.cern.ch/event/1006302/sessions/395265/">Algorithms</a> track at the annual Lattice conference covers the latest developments and ongoing research.</p>
+
+<br><hr>
+
+<p class="left">Last modified 19 July 2021</p>
+
+<p class="right">
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html5.gif" alt="Valid HTML 5!"></a>
+  <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.davidschaich.net/basic.css"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS"></a><br>
+  <a href="http://www.fsf.org/register_form?referrer=8412"><img src="../../images/fsf.png" alt="Free Software Foundation"></a>
+</p>
+</div>
+</body>
+</html>

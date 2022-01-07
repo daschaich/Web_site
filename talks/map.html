@@ -22,7 +22,95 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 81;
+    var rank = 89;
+
+    // 89, Dublin2111
+    var Dublin2111Loc  = new google.maps.LatLng(53.3313, -6.2458);
+    var Dublin2111Name = 'Composite dark matter and the role of lattice field theory';
+    var Dublin2111Date = '17 November 2021';
+    var Dublin2111Text = '<em><a href="2111Dublin.pdf">' + Dublin2111Name + '</a></em>, Dublin Institute for Advanced Studies Theoretical Physics Seminar, ' + Dublin2111Date;
+    var Dublin2111Mark = new google.maps.Marker({ map: map, position: Dublin2111Loc, icon: invited_icon, zIndex: rank, title:Dublin2111Name + ' (' + Dublin2111Date + ')' });
+    var Dublin2111Info = new google.maps.InfoWindow({ content: Dublin2111Text, maxWidth: 300 });
+    google.maps.event.addListener(Dublin2111Mark, 'click', function() { Dublin2111Info.open(map, Dublin2111Mark); });
+    if (name=='Dublin2111') { Dublin2111Info.open(map, Dublin2111Mark); }
+    rank--;
+
+    // 88, Imperial2110
+    var Imperial2110Loc  = new google.maps.LatLng(51.4995, -0.1793);
+    var Imperial2110Name = 'Supersymmetric Yang&ndash;Mills theories on the lattice';
+    var Imperial2110Date = '27 October 2021';
+    var Imperial2110Text = '<em><a href="2110Imperial.pdf">' + Imperial2110Name + '</a></em>, Imperial College London String Seminar, ' + Imperial2110Date;
+    var Imperial2110Mark = new google.maps.Marker({ map: map, position: Imperial2110Loc, icon: invited_icon, zIndex: rank, title:Imperial2110Name + ' (' + Imperial2110Date + ')' });
+    var Imperial2110Info = new google.maps.InfoWindow({ content: Imperial2110Text, maxWidth: 300 });
+    google.maps.event.addListener(Imperial2110Mark, 'click', function() { Imperial2110Info.open(map, Imperial2110Mark); });
+    if (name=='Imperial2110') { Imperial2110Info.open(map, Imperial2110Mark); }
+    rank--;
+
+    // 87, UKRI2110
+    var UKRI2110Loc  = new google.maps.LatLng(51.5668, -1.7852);
+    var UKRI2110Name = 'Progress on New Frontiers of Lattice Field Theory';
+    var UKRI2110Date = '13 October 2021';
+    var UKRI2110Text = '<em><a href="2110UKRI.pdf">' + UKRI2110Name + '</a></em>, UK Research and Innovation Future Leaders Fellowships Conference, remote, ' + UKRI2110Date;
+    var UKRI2110Mark = new google.maps.Marker({ map: map, position: UKRI2110Loc, icon: poster_icon, zIndex: rank, title:UKRI2110Name + ' (' + UKRI2110Date + ')' });
+    var UKRI2110Info = new google.maps.InfoWindow({ content: UKRI2110Text, maxWidth: 300 });
+    google.maps.event.addListener(UKRI2110Mark, 'click', function() { UKRI2110Info.open(map, UKRI2110Mark); });
+    if (name=='UKRI2110') { UKRI2110Info.open(map, UKRI2110Mark); }
+    rank--;
+
+    // 86, Lattice2107
+    var Lattice2107Loc  = new google.maps.LatLng(42.3598, -71.0907);
+    var Lattice2107Name = 'Thermal phase structure of dimensionally reduced super-Yang&ndash;Mills';
+    var Lattice2107Date = '29 July 2021';
+    var Lattice2107Text = '<em><a href="2107Lattice.pdf">' + Lattice2107Name + '</a></em>, Lattice 2021, MIT, ' + Lattice2107Date;
+    var Lattice2107Mark = new google.maps.Marker({ map: map, position: Lattice2107Loc, icon: icon, zIndex: rank, title:Lattice2107Name + ' (' + Lattice2107Date + ')' });
+    var Lattice2107Info = new google.maps.InfoWindow({ content: Lattice2107Text, maxWidth: 300 });
+    google.maps.event.addListener(Lattice2107Mark, 'click', function() { Lattice2107Info.open(map, Lattice2107Mark); });
+    if (name=='Lattice2107') { Lattice2107Info.open(map, Lattice2107Mark); }
+    rank--;
+
+    // 85, ECT2107
+    var ECT2107Loc  = new google.maps.LatLng(46.0437, 11.1407);
+    var ECT2107Name = 'Lattice studies of supersymmetric Yang&ndash;Mills in 2+1 dimensions';
+    var ECT2107Date = '9 July 2021';
+    var ECT2107Text = '<em><a href="2107ECT.pdf">' + ECT2107Name + '</a></em>, Workshop on Relativistic Fermions in Flatland, ECT* Trento, ' + ECT2107Date;
+    var ECT2107Mark = new google.maps.Marker({ map: map, position: ECT2107Loc, icon: invited_icon, zIndex: rank, title:ECT2107Name + ' (' + ECT2107Date + ')' });
+    var ECT2107Info = new google.maps.InfoWindow({ content: ECT2107Text, maxWidth: 300 });
+    google.maps.event.addListener(ECT2107Mark, 'click', function() { ECT2107Info.open(map, ECT2107Mark); });
+    if (name=='ECT2107') { ECT2107Info.open(map, ECT2107Mark); }
+    rank--;
+
+    // 84, Swansea2106
+    var Swansea2106Loc  = new google.maps.LatLng(51.6087, -3.9821);
+    var Swansea2106Name = 'Lattice strong dynamics for composite Higgs sectors';
+    var Swansea2106Date = '11 June 2021';
+    var Swansea2106Text = '<em><a href="2106Swansea.pdf">' + Swansea2106Name + '</a></em>, Swansea University Theory Seminar, ' + Swansea2106Date;
+    var Swansea2106Mark = new google.maps.Marker({ map: map, position: Swansea2106Loc, icon: invited_icon, zIndex: rank, title:Swansea2106Name + ' (' + Swansea2106Date + ')' });
+    var Swansea2106Info = new google.maps.InfoWindow({ content: Swansea2106Text, maxWidth: 300 });
+    google.maps.event.addListener(Swansea2106Mark, 'click', function() { Swansea2106Info.open(map, Swansea2106Mark); });
+    if (name=='Swansea2106') { Swansea2106Info.open(map, Swansea2106Mark); }
+    rank--;
+
+    // 83, UKLFT2103
+    var UKLFT2103Loc  = new google.maps.LatLng(51.6088, -3.9822);
+    var UKLFT2103Name = 'Broader applications of lattice field theory';
+    var UKLFT2103Date = '24 March 2021';
+    var UKLFT2103Text = '<em><a href="2103UKLFT.pdf">' + UKLFT2103Name + '</a></em>, UK Lattice Field Theory Virtual Centre kick-off event, ' + UKLFT2103Date;
+    var UKLFT2103Mark = new google.maps.Marker({ map: map, position: UKLFT2103Loc, icon: invited_icon, zIndex: rank, title:UKLFT2103Name + ' (' + UKLFT2103Date + ')' });
+    var UKLFT2103Info = new google.maps.InfoWindow({ content: UKLFT2103Text, maxWidth: 300 });
+    google.maps.event.addListener(UKLFT2103Mark, 'click', function() { UKLFT2103Info.open(map, UKLFT2103Mark); });
+    if (name=='UKLFT2103') { UKLFT2103Info.open(map, UKLFT2103Mark); }
+    rank--;
+
+    // 82, Bangalore2101
+    var Bangalore2101Loc  = new google.maps.LatLng(13.1459, 77.5141);
+    var Bangalore2101Name = 'Progress and prospects of lattice supersymmetry';
+    var Bangalore2101Date = '18 January 2021';
+    var Bangalore2101Text = '<em><a href="2101Bangalore.pdf">' + Bangalore2101Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, ' + Bangalore2101Date;
+    var Bangalore2101Mark = new google.maps.Marker({ map: map, position: Bangalore2101Loc, icon: invited_icon, zIndex: rank, title:Bangalore2101Name + ' (' + Bangalore2101Date + ')' });
+    var Bangalore2101Info = new google.maps.InfoWindow({ content: Bangalore2101Text, maxWidth: 300 });
+    google.maps.event.addListener(Bangalore2101Mark, 'click', function() { Bangalore2101Info.open(map, Bangalore2101Mark); });
+    if (name=='Bangalore2101') { Bangalore2101Info.open(map, Bangalore2101Mark); }
+    rank--;
 
     // 81, UKRI2010
     var UKRI2010Loc  = new google.maps.LatLng(51.5669, -1.7852);
@@ -232,16 +320,6 @@
     google.maps.event.addListener(Bangalore1801Mark, 'click', function() { Bangalore1801Info.open(map, Bangalore1801Mark); });
     if (name=='Bangalore1801') { Bangalore1801Info.open(map, Bangalore1801Mark); }
     rank--;
-    // 63, Bangalore1801
-    var Bangalore1801Loc  = new google.maps.LatLng(13.1459, 77.5143);
-    var Bangalore1801Name = 'Lattice N=4 Supersymmetric Yang&ndash;Mills';
-    var Bangalore1801Date = '31 January 2018';
-    var Bangalore1801Text = '<em><a href="1801Bangalore.pdf">' + Bangalore1801Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, ' + Bangalore1801Date;
-    var Bangalore1801Mark = new google.maps.Marker({ map: map, position: Bangalore1801Loc, icon: invited_icon, zIndex: rank, title:Bangalore1801Name + ' (' + Bangalore1801Date + ')' });
-    var Bangalore1801Info = new google.maps.InfoWindow({ content: Bangalore1801Text, maxWidth: 300 });
-    google.maps.event.addListener(Bangalore1801Mark, 'click', function() { Bangalore1801Info.open(map, Bangalore1801Mark); });
-    if (name=='Bangalore1801') { Bangalore1801Info.open(map, Bangalore1801Mark); }
-    rank--;
 
     // 62, StonyBrook1801
     var StonyBrook1801Loc  = new google.maps.LatLng(40.9159, -73.1271);
@@ -421,7 +499,7 @@
 
     // 46, KITP1509
     var KITP1509Loc  = new google.maps.LatLng(34.4144, -119.8404);
-    var KITP1509Name = 'Lattice Gauge Theory for N=4 Super Yang--Mills';
+    var KITP1509Name = 'Lattice Gauge Theory for N=4 Super Yang&ndash;Mills';
     var KITP1509Date = '16 September 2015';
     var KITP1509Text = '<em><a href="1509KITP.pdf">' + KITP1509Name + '</a></em>, Lattice Gauge Theory for the LHC and Beyond, Kavli Institute for Theoretical Physics, Santa Barbara, ' + KITP1509Date;
     var KITP1509Mark = new google.maps.Marker({ map: map, position: KITP1509Loc, icon: invited_icon, zIndex: rank, title:KITP1509Name + ' (' + KITP1509Date + ')' });
@@ -950,6 +1028,18 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
+    <td></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(53.3313, -6.2458, 8, 'Dublin2111')"><em>Composite dark matter and the role of lattice field theory</em>, Dublin Institute for Advanced Studies Theoretical Physics Seminar, 17 November 2021</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(51.4995, -0.1793, 8, 'Imperial2110')"><em>Supersymmetric Yang&ndash;Mills theories on the lattice</em>, Imperial College London String Seminar, 27 October 2021</a></td>
+  </tr><tr>
+    <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(51.5668, -1.7852, 8, 'UKRI2110')"><em>Progress on New Frontiers of Lattice Field Theory</em>, UK Research and Innovation Future Leaders Fellowships Conference, remote, 13 October 2021</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(42.3598, -71.0907, 8, 'Lattice2107')"><em>Thermal phase structure of dimensionally reduced super-Yang&ndash;Mills</em>, Lattice 2021, MIT, 29 July 2021</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(46.0437, 11.1407, 8, 'ECT2107')"><em>Lattice studies of supersymmetric Yang&ndash;Mills in 2+1 dimensions</em>, Workshop on Relativistic Fermions in Flatland, ECT* Trento, 9 July 2021</a></td>
+  </tr><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(51.6087, -3.9821, 8, 'Swansea2106')"><em>Lattice strong dynamics for composite Higgs sectors</em>, Swansea University Theory Seminar, 11 June 2021</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(51.6088, -3.9822, 8, 'UKLFT2103')"><em>Broader applications of lattice field theory</em>, UK Lattice Field Theory Virtual Centre kick-off event, 24 March 2021</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(13.1459, 77.5141, 8, 'Bangalore2101')"><em>Progress and prospects of lattice supersymmetry</em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, 18 January 2021</a></td>
+  </tr><tr>
     <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(51.5669, -1.7852, 8, 'UKRI2010')"><em>Advancing New Frontiers of Lattice Field Theory</em>, UK Research and Innovation Future Leaders Fellowships Conference, remote, 14 October 2020</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(43.4654, -80.5277, 8, 'Perimeter2001')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, Perimeter Institute Quantum Fields and Strings Seminar, 10 January 2020</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9348, -1.3997, 8, 'Soton1911_DM')"><em>Lattice field theory for composite dark matter</em>, University of Southampton High Energy Theory Seminar, 29 November 2019</a></td>
@@ -996,7 +1086,7 @@
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(40.9156, -73.1262, 8, 'StonyBrook1511')"><em>Physics Out Of The Box: The impact of lattice gauge theory and advanced computing</em>, Stony Brook University Nuclear Theory Seminar, 13 November 2015</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(42.7240, -84.4761, 8, 'MSU1511')"><em>Physics Out Of The Box: The impact of lattice gauge theory and large-scale computing</em>, Michigan State University High Energy Physics Seminar, 3 November 2015</a></td>
-    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(34.4144, -119.8404, 8, 'KITP1509')"><em>Lattice Gauge Theory for N=4 Super Yang--Mills</em>, Lattice Gauge Theory for the LHC and Beyond, Kavli Institute for Theoretical Physics, Santa Barbara, 16 September 2015</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(34.4144, -119.8404, 8, 'KITP1509')"><em>Lattice Gauge Theory for N=4 Super Yang&ndash;Mills</em>, Lattice Gauge Theory for the LHC and Beyond, Kavli Institute for Theoretical Physics, Santa Barbara, 16 September 2015</a></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(39.1559, -120.1542, 8, 'LGT4CH')"><em>Lattice gauge theory for composite Higgs</em>, 23rd International Conference on Supersymmetry and Unification of Fundamental Interactions, Lake Tahoe, CA, 28 August 2015</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(39.1580, -120.1545, 8, 'SUSY15')"><em>N=4 super Yang&ndash;Mills on a space-time lattice</em>, 23rd International Conference on Supersymmetry and Unification of Fundamental Interactions, Lake Tahoe, CA, 25 August 2015</a></td>
@@ -1061,7 +1151,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 7 July 2020</p>
+<p class="left">Last modified 7 January 2022</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>
