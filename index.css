@@ -1,0 +1,30 @@
+/* CSS Document */
+body {
+  background: black;
+  color: white;
+}
+
+a {
+  color: black;
+  background:white;
+  text-decoration: none;
+  font-size:20pt;
+}
+
+a:hover {
+  color: red;
+  background:black;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 22pt;
+}
+
+p:hover {
+  color: red;
+}
+
+#table {
+  margin-top: 15%;
+}

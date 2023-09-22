@@ -22,7 +22,84 @@
     var icon = new google.maps.MarkerImage( 'marker.png', iconSize );
     var invited_icon = new google.maps.MarkerImage( 'invited_marker.png', iconSize );
     var poster_icon = new google.maps.MarkerImage( 'poster_marker.png', iconSize );
-    var rank = 89;
+    var rank = 96;
+
+    // 96, Lattice2308
+    var Lattice2308Loc  = new google.maps.LatLng(41.8385, -88.2613);
+    var Lattice2308Name = 'Exploring lattice supersymmetry with variational quantum deflation';
+    var Lattice2308Date = '3 August 2023';
+    var Lattice2308Text = '<em><a href="2308Lattice.pdf">' + Lattice2308Name + '</a></em>, Lattice 2023, Fermilab, ' + Lattice2308Date;
+    var Lattice2308Mark = new google.maps.Marker({ map: map, position: Lattice2308Loc, icon: icon, zIndex: rank, title:Lattice2308Name + ' (' + Lattice2308Date + ')' });
+    var Lattice2308Info = new google.maps.InfoWindow({ content: Lattice2308Text, maxWidth: 300 });
+    google.maps.event.addListener(Lattice2308Mark, 'click', function() { Lattice2308Info.open(map, Lattice2308Mark); });
+    if (name=='Lattice2308') { Lattice2308Info.open(map, Lattice2308Mark); }
+    rank--;
+
+    // 95, APCTP2307
+    var APCTP2307Loc  = new google.maps.LatLng(36.0121, 129.3220);
+    var APCTP2307Name = 'Numerical methods in lattice field theory beyond the standard model';
+    var APCTP2307Date = '13 July 2023';
+    var APCTP2307Text = '<em><a href="2307APCTP.pdf">' + APCTP2307Name + '</a></em>, Workshop on Numerical Methods in Theoretical Physics, Asia Pacific Center for Theoretical Physics, Pohang, ' + APCTP2307Date;
+    var APCTP2307Mark = new google.maps.Marker({ map: map, position: APCTP2307Loc, icon: invited_icon, zIndex: rank, title:APCTP2307Name + ' (' + APCTP2307Date + ')' });
+    var APCTP2307Info = new google.maps.InfoWindow({ content: APCTP2307Text, maxWidth: 300 });
+    google.maps.event.addListener(APCTP2307Mark, 'click', function() { APCTP2307Info.open(map, APCTP2307Mark); });
+    if (name=='APCTP2307') { APCTP2307Info.open(map, APCTP2307Mark); }
+    rank--;
+
+    // 94, NQM2306
+    var NQM2306Loc  = new google.maps.LatLng(53.9504, -1.0513);
+    var NQM2306Name = 'Quantum simulation for quantum field theories';
+    var NQM2306Date = '12 June 2023';
+    var NQM2306Text = '<em><a href="2306NQM.pdf">' + NQM2306Name + '</a></em>, Northern Quantum Meeting VIII, University of York, ' + NQM2306Date;
+    var NQM2306Mark = new google.maps.Marker({ map: map, position: NQM2306Loc, icon: icon, zIndex: rank, title:NQM2306Name + ' (' + NQM2306Date + ')' });
+    var NQM2306Info = new google.maps.InfoWindow({ content: NQM2306Text, maxWidth: 300 });
+    google.maps.event.addListener(NQM2306Mark, 'click', function() { NQM2306Info.open(map, NQM2306Mark); });
+    if (name=='NQM2306') { NQM2306Info.open(map, NQM2306Mark); }
+    rank--;
+
+    // 93, Bangalore2208
+    var Bangalore2208Loc  = new google.maps.LatLng(13.1459, 77.5145);
+    var Bangalore2208Name = 'Lattice studies of three-dimensional super-Yang&ndash;Mills';
+    var Bangalore2208Date = '29 August 2022';
+    var Bangalore2208Text = '<em><a href="2208Bangalore.pdf">' + Bangalore2208Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bengaluru, ' + Bangalore2208Date;
+    var Bangalore2208Mark = new google.maps.Marker({ map: map, position: Bangalore2208Loc, icon: invited_icon, zIndex: rank, title:Bangalore2208Name + ' (' + Bangalore2208Date + ')' });
+    var Bangalore2208Info = new google.maps.InfoWindow({ content: Bangalore2208Text, maxWidth: 300 });
+    google.maps.event.addListener(Bangalore2208Mark, 'click', function() { Bangalore2208Info.open(map, Bangalore2208Mark); });
+    if (name=='Bangalore2208') { Bangalore2208Info.open(map, Bangalore2208Mark); }
+    rank--;
+
+    // 92, Lattice2208
+    var Lattice2208Loc  = new google.maps.LatLng(50.7266, 7.0848);
+    var Lattice2208Name = 'Exploring conformality in lattice N=4 super-Yang&ndash;Mills';
+    var Lattice2208Date = '8 August 2022';
+    var Lattice2208Text = '<em><a href="2208Lattice.pdf">' + Lattice2208Name + '</a></em>, Lattice 2022, Bonn, ' + Lattice2208Date;
+    var Lattice2208Mark = new google.maps.Marker({ map: map, position: Lattice2208Loc, icon: icon, zIndex: rank, title:Lattice2208Name + ' (' + Lattice2208Date + ')' });
+    var Lattice2208Info = new google.maps.InfoWindow({ content: Lattice2208Text, maxWidth: 300 });
+    google.maps.event.addListener(Lattice2208Mark, 'click', function() { Lattice2208Info.open(map, Lattice2208Mark); });
+    if (name=='Lattice2208') { Lattice2208Info.open(map, Lattice2208Mark); }
+    rank--;
+
+    // 91, APCTP2205
+    var APCTP2205Loc  = new google.maps.LatLng(36.0121, 129.3219);
+    var APCTP2205Name = 'Numerical methods in lattice supersymmetry';
+    var APCTP2205Date = '18 May 2022';
+    var APCTP2205Text = '<em><a href="2205APCTP.pdf">' + APCTP2205Name + '</a></em>, Workshop on Numerical Methods in Theoretical Physics, Asia Pacific Center for Theoretical Physics, Pohang, ' + APCTP2205Date;
+    var APCTP2205Mark = new google.maps.Marker({ map: map, position: APCTP2205Loc, icon: invited_icon, zIndex: rank, title:APCTP2205Name + ' (' + APCTP2205Date + ')' });
+    var APCTP2205Info = new google.maps.InfoWindow({ content: APCTP2205Text, maxWidth: 300 });
+    google.maps.event.addListener(APCTP2205Mark, 'click', function() { APCTP2205Info.open(map, APCTP2205Mark); });
+    if (name=='APCTP2205') { APCTP2205Info.open(map, APCTP2205Mark); }
+    rank--;
+
+    // 90, Liverpool2204
+    var Liverpool2204Loc  = new google.maps.LatLng(53.4050, -2.9651);
+    var Liverpool2204Name = 'Lattice strong dynamics for composite Higgs sectors';
+    var Liverpool2204Date = '27 April 2022';
+    var Liverpool2204Text = '<em><a href="2204Liverpool.pdf">' + Liverpool2204Name + '</a></em>, University of Liverpool Theoretical Physics Seminar, ' + Liverpool2204Date;
+    var Liverpool2204Mark = new google.maps.Marker({ map: map, position: Liverpool2204Loc, icon: invited_icon, zIndex: rank, title:Liverpool2204Name + ' (' + Liverpool2204Date + ')' });
+    var Liverpool2204Info = new google.maps.InfoWindow({ content: Liverpool2204Text, maxWidth: 300 });
+    google.maps.event.addListener(Liverpool2204Mark, 'click', function() { Liverpool2204Info.open(map, Liverpool2204Mark); });
+    if (name=='Liverpool2204') { Liverpool2204Info.open(map, Liverpool2204Mark); }
+    rank--;
 
     // 89, Dublin2111
     var Dublin2111Loc  = new google.maps.LatLng(53.3313, -6.2458);
@@ -105,7 +182,7 @@
     var Bangalore2101Loc  = new google.maps.LatLng(13.1459, 77.5141);
     var Bangalore2101Name = 'Progress and prospects of lattice supersymmetry';
     var Bangalore2101Date = '18 January 2021';
-    var Bangalore2101Text = '<em><a href="2101Bangalore.pdf">' + Bangalore2101Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, ' + Bangalore2101Date;
+    var Bangalore2101Text = '<em><a href="2101Bangalore.pdf">' + Bangalore2101Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bengaluru, ' + Bangalore2101Date;
     var Bangalore2101Mark = new google.maps.Marker({ map: map, position: Bangalore2101Loc, icon: invited_icon, zIndex: rank, title:Bangalore2101Name + ' (' + Bangalore2101Date + ')' });
     var Bangalore2101Info = new google.maps.InfoWindow({ content: Bangalore2101Text, maxWidth: 300 });
     google.maps.event.addListener(Bangalore2101Mark, 'click', function() { Bangalore2101Info.open(map, Bangalore2101Mark); });
@@ -314,7 +391,7 @@
     var Bangalore1801Loc  = new google.maps.LatLng(13.1459, 77.5143);
     var Bangalore1801Name = 'Lattice N=4 Supersymmetric Yang&ndash;Mills';
     var Bangalore1801Date = '31 January 2018';
-    var Bangalore1801Text = '<em><a href="1801Bangalore.pdf">' + Bangalore1801Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bangalore, ' + Bangalore1801Date;
+    var Bangalore1801Text = '<em><a href="1801Bangalore.pdf">' + Bangalore1801Name + '</a></em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bengaluru, ' + Bangalore1801Date;
     var Bangalore1801Mark = new google.maps.Marker({ map: map, position: Bangalore1801Loc, icon: invited_icon, zIndex: rank, title:Bangalore1801Name + ' (' + Bangalore1801Date + ')' });
     var Bangalore1801Info = new google.maps.InfoWindow({ content: Bangalore1801Text, maxWidth: 300 });
     google.maps.event.addListener(Bangalore1801Mark, 'click', function() { Bangalore1801Info.open(map, Bangalore1801Mark); });
@@ -358,7 +435,7 @@
     var Lattice17Loc  = new google.maps.LatLng(37.1655, -3.5985);
     var Lattice17Name = 'Phases of a strongly coupled four-fermion theory';
     var Lattice17Date = '22 June 2017';
-    var Lattice17Text = '<em><a href="lattice17.pdf">' + Lattice17Name + '</a></em>, Lattice 2017, Granada, Spain, ' + Lattice17Date;
+    var Lattice17Text = '<em><a href="lattice17.pdf">' + Lattice17Name + '</a></em>, Lattice 2017, Granada, ' + Lattice17Date;
     var Lattice17Mark = new google.maps.Marker({ map: map, position: Lattice17Loc, icon: icon, zIndex: rank, title:Lattice17Name + ' (' + Lattice17Date + ')' });
     var Lattice17Info = new google.maps.InfoWindow({ content: Lattice17Text, maxWidth: 300 });
     google.maps.event.addListener(Lattice17Mark, 'click', function() { Lattice17Info.open(map, Lattice17Mark); });
@@ -380,7 +457,7 @@
     var BadHonnef17Loc  = new google.maps.LatLng(50.6515, 7.2199);
     var BadHonnef17Name = 'Light scalar from lattice strong dynamics';
     var BadHonnef17Date = '14 February 2017';
-    var BadHonnef17Text = '<em><a href="1702BadHonnef.pdf">' + BadHonnef17Name + '</a></em>, 637th Wilhelm und Else Heraeus-Seminar "Understanding the LHC", Bad Honnef, Germany, ' + BadHonnef17Date;
+    var BadHonnef17Text = '<em><a href="1702BadHonnef.pdf">' + BadHonnef17Name + '</a></em>, 637th Wilhelm und Else Heraeus-Seminar "Understanding the LHC", Bad Honnef, ' + BadHonnef17Date;
     var BadHonnef17Mark = new google.maps.Marker({ map: map, position: BadHonnef17Loc, icon: icon, zIndex: rank, title:BadHonnef17Name + ' (' + BadHonnef17Date + ')' });
     var BadHonnef17Info = new google.maps.InfoWindow({ content: BadHonnef17Text, maxWidth: 300 });
     google.maps.event.addListener(BadHonnef17Mark, 'click', function() { BadHonnef17Info.open(map, BadHonnef17Mark); });
@@ -413,7 +490,7 @@
     var Lattice16Loc  = new google.maps.LatLng(50.9368, -1.3967);
     var Lattice16Name = 'Latest results from lattice N=4 super Yang&ndash;Mills';
     var Lattice16Date = '26 July 2016';
-    var Lattice16Text = '<em><a href="lattice16.pdf">' + Lattice16Name + '</a></em>, Lattice 2016, Southampton, England, ' + Lattice16Date;
+    var Lattice16Text = '<em><a href="lattice16.pdf">' + Lattice16Name + '</a></em>, Lattice 2016, Southampton, ' + Lattice16Date;
     var Lattice16Mark = new google.maps.Marker({ map: map, position: Lattice16Loc, icon: icon, zIndex: rank, title:Lattice16Name + ' (' + Lattice16Date + ')' });
     var Lattice16Info = new google.maps.InfoWindow({ content: Lattice16Text, maxWidth: 300 });
     google.maps.event.addListener(Lattice16Mark, 'click', function() { Lattice16Info.open(map, Lattice16Mark); });
@@ -534,7 +611,7 @@
     var Lattice15Loc  = new google.maps.LatLng(34.6661, 135.2132);
     var Lattice15Name = 'New results from lattice N=4 super Yang&ndash;Mills';
     var Lattice15Date = '18 July 2015';
-    var Lattice15Text = '<em><a href="lattice15.pdf">' + Lattice15Name + '</a></em>, Lattice 2015, Kobe, Japan, ' + Lattice15Date;
+    var Lattice15Text = '<em><a href="lattice15.pdf">' + Lattice15Name + '</a></em>, Lattice 2015, Kobe, ' + Lattice15Date;
     var Lattice15Mark = new google.maps.Marker({ map: map, position: Lattice15Loc, icon: icon, zIndex: rank, title:Lattice15Name + ' (' + Lattice15Date + ')' });
     var Lattice15Info = new google.maps.InfoWindow({ content: Lattice15Text, maxWidth: 300 });
     google.maps.event.addListener(Lattice15Mark, 'click', function() { Lattice15Info.open(map, Lattice15Mark); });
@@ -677,7 +754,7 @@
     var Mass13Loc  = new google.maps.LatLng(55.3674, 10.4304);
     var Mass13Name = 'Fun with the S parameter on the lattice';
     var Mass13Date = '7 August 2013';
-    var Mass13Text = '<em><a href="Mass13.pdf">' + Mass13Name + '</a></em>, Origin of Mass 2013 Lattice BSM Workshop, CP<sup>3</sup>-Origins, Odense, Denmark, ' + Mass13Date;
+    var Mass13Text = '<em><a href="Mass13.pdf">' + Mass13Name + '</a></em>, Origin of Mass 2013 Lattice BSM Workshop, CP<sup>3</sup>-Origins, Odense, ' + Mass13Date;
     var Mass13Mark = new google.maps.Marker({ map: map, position: Mass13Loc, icon: invited_icon, zIndex: rank, title:Mass13Name + ' (' + Mass13Date + ')' });
     var Mass13Info = new google.maps.InfoWindow({ content: Mass13Text, maxWidth: 300 });
     google.maps.event.addListener(Mass13Mark, 'click', function() { Mass13Info.open(map, Mass13Mark); });
@@ -688,7 +765,7 @@
     var Lattice13Loc  = new google.maps.LatLng(49.9950, 8.2431);
     var Lattice13Name = 'Eight light flavors on large lattice volumes';
     var Lattice13Date = '29 July 2013';
-    var Lattice13Text = '<em><a href="lattice13.pdf">' + Lattice13Name + '</a></em> (for <a href="http://bsm.physics.yale.edu">USBSM</a>), Lattice 2013, Mainz, Germany, ' + Lattice13Date;
+    var Lattice13Text = '<em><a href="lattice13.pdf">' + Lattice13Name + '</a></em> (for <a href="http://bsm.physics.yale.edu">USBSM</a>), Lattice 2013, Mainz, ' + Lattice13Date;
     var Lattice13Mark = new google.maps.Marker({ map: map, position: Lattice13Loc, icon: icon, zIndex: rank, title:Lattice13Name + ' (' + Lattice13Date + ')' });
     var Lattice13Info = new google.maps.InfoWindow({ content: Lattice13Text, maxWidth: 300 });
     google.maps.event.addListener(Lattice13Mark, 'click', function() { Lattice13Info.open(map, Lattice13Mark); });
@@ -754,7 +831,7 @@
     var Lattice12Loc  = new google.maps.LatLng(-16.9285, 145.7783);
     var Lattice12Name = 'Bulk and finite-temperature transitions in SU(3) gauge theories with many light fermions';
     var Lattice12Date = '25 June 2012';
-    var Lattice12Text = '<em><a href="lattice12.pdf">' + Lattice12Name + '</a></em>, Lattice 2012, Cairns, Australia, ' + Lattice12Date;
+    var Lattice12Text = '<em><a href="lattice12.pdf">' + Lattice12Name + '</a></em>, Lattice 2012, Cairns, ' + Lattice12Date;
     var Lattice12Mark = new google.maps.Marker({ map: map, position: Lattice12Loc, icon: icon, zIndex: rank, title:Lattice12Name + ' (' + Lattice12Date + ')' });
     var Lattice12Info = new google.maps.InfoWindow({ content: Lattice12Text, maxWidth: 300 });
     google.maps.event.addListener(Lattice12Mark, 'click', function() { Lattice12Info.open(map, Lattice12Mark); });
@@ -806,7 +883,7 @@
     rank--;
 
     // 18, LME2011
-    var LME2011Loc  = new google.maps.LatLng(41.8512, -88.2602);
+    var LME2011Loc  = new google.maps.LatLng(41.8385, -88.2614);
     var LME2011Name = 'The S Parameter on the Lattice';
     var LME2011Date = '15 October 2011';
     var LME2011Text = '<em><a href="LME2011.pdf">' + LME2011Name + '</a></em>, Lattice Meets Experiment: Beyond the Standard Model, Fermilab, ' + LME2011Date;
@@ -820,7 +897,7 @@
     var SITposterLoc  = new google.maps.LatLng(24.7940, 120.9930);
     var SITposterName = 'Exploring the Origin of Mass with High-Performance Computing';
     var SITposterDate = '19 August 2011';
-    var SITposterText = '<em><a href="SITposter.pdf">' + SITposterName + '</a></em>, National Tsing Hua University, Hsinchu, Taiwan, ' + SITposterDate;
+    var SITposterText = '<em><a href="SITposter.pdf">' + SITposterName + '</a></em>, National Science Foundation EAPSI Project Exhibition, National Tsing Hua University, ' + SITposterDate;
     var SITposterMark = new google.maps.Marker({ map: map, position: SITposterLoc, icon: poster_icon, zIndex: rank, title:SITposterName + ' (' + SITposterDate + ')' });
     var SITposterInfo = new google.maps.InfoWindow({ content: SITposterText, maxWidth: 300 });
     google.maps.event.addListener(SITposterMark, 'click', function() { SITposterInfo.open(map, SITposterMark); });
@@ -831,7 +908,7 @@
     var Lattice11Loc  = new google.maps.LatLng(39.1968, -120.2337);
     var Lattice11Name = 'S parameter and parity doubling below the conformal window';
     var Lattice11Date = '12 July 2011';
-    var Lattice11Text = '<em><a href="Lattice11.pdf">' + Lattice11Name + '</a></em> (for the <a href="http://www.yale.edu/lsd/">LSD Collaboration</a>), Lattice 2011, Lake Tahoe, CA, ' + Lattice11Date;
+    var Lattice11Text = '<em><a href="Lattice11.pdf">' + Lattice11Name + '</a></em> (for the <a href="http://www.yale.edu/lsd/">LSD Collaboration</a>), Lattice 2011, Lake Tahoe, ' + Lattice11Date;
     var Lattice11Mark = new google.maps.Marker({ map: map, position: Lattice11Loc, icon: icon, zIndex: rank, title:Lattice11Name + ' (' + Lattice11Date + ')' });
     var Lattice11Info = new google.maps.InfoWindow({ content: Lattice11Text, maxWidth: 300 });
     google.maps.event.addListener(Lattice11Mark, 'click', function() { Lattice11Info.open(map, Lattice11Mark); });
@@ -897,7 +974,7 @@
     var Lattice10Loc  = new google.maps.LatLng(39.1233, 9.5232);
     var Lattice10Name = 'Flavor dependence of the S parameter in SU(3) gauge theory';
     var Lattice10Date = '17 June 2010';
-    var Lattice10Text = '<em><a href="Lattice10.pdf">' + Lattice10Name + '</a></em> (for the <a href="http://www.yale.edu/lsd/">LSD Collaboration</a>), Lattice 2010, Villasimius, Italy, ' + Lattice10Date;
+    var Lattice10Text = '<em><a href="Lattice10.pdf">' + Lattice10Name + '</a></em> (for the <a href="http://www.yale.edu/lsd/">LSD Collaboration</a>), Lattice 2010, Villasimius, ' + Lattice10Date;
     var Lattice10Mark = new google.maps.Marker({ map: map, position: Lattice10Loc, icon: icon, zIndex: rank, title:Lattice10Name + ' (' + Lattice10Date + ')' });
     var Lattice10Info = new google.maps.InfoWindow({ content: Lattice10Text, maxWidth: 300 });
     google.maps.event.addListener(Lattice10Mark, 'click', function() { Lattice10Info.open(map, Lattice10Mark); });
@@ -1028,7 +1105,15 @@
 <p>&nbsp;</p>
 
 <table style="font-size:80%"><tr>
-    <td></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(41.8385, -88.2613, 8, 'Lattice2308')"><em>Exploring lattice supersymmetry with variational quantum deflation</em>, Lattice 2023, Fermilab, 3 August 2023</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(36.0121, 129.3220, 8, 'APCTP2307')"><em>Numerical methods in lattice field theory beyond the standard model</em>, Workshop on Numerical Methods in Theoretical Physics, Asia Pacific Center for Theoretical Physics, Pohang, 13 July 2023</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(53.9504, -1.0513, 8, 'NQM2306')"><em>Quantum simulation for quantum field theories</em>, Northern Quantum Meeting VIII, York, 12 June 2023</a></td>
+  </tr><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(13.1459, 77.5145, 8, 'Bangalore2208')"><em>Lattice studies of three-dimensional super-Yang&ndash;Mills</em>, Program on Nonperturbative and Numerical Approaches to Quantum Gravity, String Theory and Holography, International Centre for Theoretical Sciences, Bengaluru, 29 August 2022</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.7266, 7.0848, 8, 'Lattice2208')"><em>Exploring conformality in lattice N=4 super-Yang&ndash;Mills</em>, Lattice 2022, Bonn, 8 August 2022</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(36.0121, 129.3219, 8, 'APCTP2205')"><em>Numerical methods in lattice supersymmetry</em>, Workshop on Numerical Methods in Theoretical Physics, Asia Pacific Center for Theoretical Physics, Pohang, 18 May 2022</a></td>
+  </tr><tr>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(53.4050, -2.9651, 8, 'Liverpool2204')"><em>Lattice strong dynamics for composite Higgs sectors</em>, University of Liverpool Theoretical Physics Seminar, 27 April 2022</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(53.3313, -6.2458, 8, 'Dublin2111')"><em>Composite dark matter and the role of lattice field theory</em>, Dublin Institute for Advanced Studies Theoretical Physics Seminar, 17 November 2021</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(51.4995, -0.1793, 8, 'Imperial2110')"><em>Supersymmetric Yang&ndash;Mills theories on the lattice</em>, Imperial College London String Seminar, 27 October 2021</a></td>
   </tr><tr>
@@ -1069,14 +1154,14 @@
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(43.6331, 3.8655, 8, 'Montpellier1712')"><em>Lattice gauge theory at the electroweak scale</em>, Workshop on Strong Dynamics at the Electroweak Scale, University of Montpellier, 6 December 2017</a></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(50.9294, 11.5847, 8, 'Jena1711')"><em>Lattice studies of maximally supersymmetric Yang&ndash;Mills theories</em>, Workshop on Strongly Interacting Field Theories, Friedrich Schiller University Jena, 25 November 2017</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(37.1655, -3.5985, 8, 'Lattice17')"><em>Phases of a strongly coupled four-fermion theory</em>, Lattice 2017, Granada, Spain, 22 June 2017</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(37.1655, -3.5985, 8, 'Lattice17')"><em>Phases of a strongly coupled four-fermion theory</em>, Lattice 2017, Granada, 22 June 2017</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(52.2129, 20.9828, 8, 'Planck1705')"><em>Lattice gauge theory beyond the standard model</em>, 20th International Conference From the Planck Scale to the Electroweak Scale, Warsaw, 22 May 2017</a></td>
   </tr><tr>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.6515, 7.2199, 8, 'BadHonnef17')"><em>Light scalar from lattice strong dynamics</em>, 637th Wilhelm und Else Heraeus-Seminar "Understanding the LHC", Bad Honnef, Germany, 14 February 2017</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.6515, 7.2199, 8, 'BadHonnef17')"><em>Light scalar from lattice strong dynamics</em>, 637th Wilhelm und Else Heraeus-Seminar "Understanding the LHC", Bad Honnef, 14 February 2017</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(55.9215, -3.1735, 8, 'Edinburgh1611')"><em>Maximally supersymmetric Yang&ndash;Mills on the lattice</em>, University of Edinburgh Higgs Centre Particle Physics Theory Seminar, 23 November 2016</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(46.9512, 7.4389, 8, 'LatticeN4_Bern')"><em>Lattice N=4 SYM</em>, University of Bern AEC Institute for Theoretical Physics lunch seminar, 13 October 2016</a></td>
   </tr><tr>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.9368, -1.3967, 8, 'Lattice16')"><em>Latest results from lattice N=4 super Yang&ndash;Mills</em>, Lattice 2016, Southampton, England, 26 July 2016</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(50.9368, -1.3967, 8, 'Lattice16')"><em>Latest results from lattice N=4 super Yang&ndash;Mills</em>, Lattice 2016, Southampton, 26 July 2016</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(55.8718, -4.2913, 8, 'Glasgow1604')"><em>Physics Out Of The Box: The impact of lattice gauge theory</em>, University of Glasgow, 18 April 2016</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(42.7293, -73.6788, 8, 'RPI1602')"><em>Composite dark matter and the role of lattice field theory</em>, Rensselaer Polytechnic Institute Colloquium, 17 February 2016</a></td>
   </tr><tr>
@@ -1088,9 +1173,9 @@
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(42.7240, -84.4761, 8, 'MSU1511')"><em>Physics Out Of The Box: The impact of lattice gauge theory and large-scale computing</em>, Michigan State University High Energy Physics Seminar, 3 November 2015</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(34.4144, -119.8404, 8, 'KITP1509')"><em>Lattice Gauge Theory for N=4 Super Yang&ndash;Mills</em>, Lattice Gauge Theory for the LHC and Beyond, Kavli Institute for Theoretical Physics, Santa Barbara, 16 September 2015</a></td>
   </tr><tr>
-    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(39.1559, -120.1542, 8, 'LGT4CH')"><em>Lattice gauge theory for composite Higgs</em>, 23rd International Conference on Supersymmetry and Unification of Fundamental Interactions, Lake Tahoe, CA, 28 August 2015</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(39.1580, -120.1545, 8, 'SUSY15')"><em>N=4 super Yang&ndash;Mills on a space-time lattice</em>, 23rd International Conference on Supersymmetry and Unification of Fundamental Interactions, Lake Tahoe, CA, 25 August 2015</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(34.6661, 135.2132, 8, 'Lattice15')"><em>New results from lattice N=4 super Yang&ndash;Mills</em>, Lattice 2015, Kobe, Japan, 18 July 2015</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(39.1559, -120.1542, 8, 'LGT4CH')"><em>Lattice gauge theory for composite Higgs</em>, 23rd International Conference on Supersymmetry and Unification of Fundamental Interactions, Lake Tahoe, 28 August 2015</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(39.1580, -120.1545, 8, 'SUSY15')"><em>N=4 super Yang&ndash;Mills on a space-time lattice</em>, 23rd International Conference on Supersymmetry and Unification of Fundamental Interactions, Lake Tahoe, 25 August 2015</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(34.6661, 135.2132, 8, 'Lattice15')"><em>New results from lattice N=4 super Yang&ndash;Mills</em>, Lattice 2015, Kobe, 18 July 2015</a></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(39.1980, -106.8289, 8, 'Aspen2015')"><em>Lattice supersymmetry in a nutshell</em>, Understanding Strongly Coupled Systems in High Energy and Condensed Matter Physics, Aspen Center for Physics, 28 May 2015</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(37.6844, -121.6974, 8, 'Livermore1504')"><em>Lattice for Supersymmetric Physics</em>, Lattice for Beyond the Standard Model Physics, Lawrence Livermore National Laboratory, 25 April 2015</a></td>
@@ -1108,8 +1193,8 @@
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(43.0371, -76.1349, 8, 'LSD_SU4_1403')"><em>Composite dark matter on the lattice: the effective Higgs interaction</em>, Syracuse University High Energy Theory Seminar, 24 March 2014</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(43.0371, -76.1347, 8, 'LSD_EFT13')"><em>From Lattice Strong Dynamics to Electroweak Phenomenology</em>, Syracuse University High Energy Theory Seminar, 4 November 2013</a></td>
   </tr><tr>
-    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(55.3674, 10.4304, 8, 'Mass13')"><em>Fun with the S parameter on the lattice</em>, Origin of Mass 2013 Lattice BSM Workshop, CP<sup>3</sup>-Origins, Odense, Denmark, 7 August 2013</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(49.9950, 8.2431, 8, 'Lattice13')"><em>Eight light flavors on large lattice volumes</em> (for USBSM), Lattice 2013, Mainz, Germany, 29 July 2013</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(55.3674, 10.4304, 8, 'Mass13')"><em>Fun with the S parameter on the lattice</em>, Origin of Mass 2013 Lattice BSM Workshop, CP<sup>3</sup>-Origins, Odense, 7 August 2013</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(49.9950, 8.2431, 8, 'Lattice13')"><em>Eight light flavors on large lattice volumes</em> (for USBSM), Lattice 2013, Mainz, 29 July 2013</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(39.1980, -106.8288, 8, 'Aspen2013')"><em>Exploring a new lattice phase</em>, Lattice Gauge Theory in the LHC Era, Aspen Center for Physics, 31 May 2013</a></td>
   </tr><tr>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(43.0371, -76.1348, 8, 'SU1304')"><em>Going Beyond QCD on the Lattice</em>, Syracuse University High Energy Theory Seminar, 23 April 2013</a></td>
@@ -1117,16 +1202,16 @@
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(40.0077, -105.2686, 8, 'LME2012')"><em>SU(3) gauge theories with many massless fermions: methods and mysteries</em>, Lattice Meets Experiment: Beyond the Standard Model, University of Colorado, 27 October 2012</a></td>
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(40.0080, -105.2679, 8, 'g-2_1209')"><em>(g &ndash; 2)<sub>&#956;</sub> FAQ</em>, University of Colorado, 20 September 2012</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(-16.9285, 145.7783, 8, 'Lattice12')"><em>Bulk and finite-temperature transitions in SU(3) gauge theories with many light fermions</em>, Lattice 2012, Cairns, Australia, 25 June 2012</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(-16.9285, 145.7783, 8, 'Lattice12')"><em>Bulk and finite-temperature transitions in SU(3) gauge theories with many light fermions</em>, Lattice 2012, Cairns, 25 June 2012</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(40.0080, -105.2680, 8, 'LSD10f_1204')"><em>Lattice Strong Dynamics: Turning it up to ten</em>, University of Colorado, 19 April 2012</a></td>
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(33.7616, -84.3872, 8, 'April12')"><em>Novel phase in SU(3) lattice gauge theories with many light fermions</em>, APS April Meeting, Atlanta, 1 April 2012</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(35.1571, 136.9670, 8, 'SCGT12Mini')"><em>Lattice Strong Dynamics for the LHC</em>, Conformality in Strong Coupling Gauge Theories at LHC and Lattice, Kobayashi&ndash;Maskawa Institute, Nagoya University, 20 March 2012</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(40.0080, -105.2678, 8, 'WW1202')"><em>Lattice Strong Dynamics for the LHC: WW Scattering Parameters via Pseudoscalar Phase Shifts</em>, University of Colorado, 9 February 2012</a></td>
   </tr><tr>
-    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(41.8512, -88.2602, 8, 'LME2011')"><em>The S Parameter on the Lattice</em>, Lattice Meets Experiment: Beyond the Standard Model, Fermilab, 15 October 2011</a></td>
+    <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(41.8385, -88.2614, 8, 'LME2011')"><em>The S Parameter on the Lattice</em>, Lattice Meets Experiment: Beyond the Standard Model, Fermilab, 15 October 2011</a></td>
     <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(24.7940, 120.9930, 8, 'SITposter')"><em>Exploring the Origin of Mass with High-Performance Computing</em>, National Tsing Hua University, Hsinchu, Taiwan, 19 August 2011</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(39.1968, -120.2337, 8, 'Lattice11')"><em>S parameter and parity doubling below the conformal window</em> (for the LSD Collaboration), Lattice 2011, Lake Tahoe, CA, 12 July 2011</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(39.1968, -120.2337, 8, 'Lattice11')"><em>S parameter and parity doubling below the conformal window</em> (for the LSD Collaboration), Lattice 2011, Lake Tahoe, 12 July 2011</a></td>
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(42.3485, -71.1010, 8, 'defense')"><em>Measuring the S parameter on the Lattice</em> Boston University, 12 May 2011</a></td>
     <td><img src="invited_marker.png" alt="invited" height=20><a onclick="initialize(42.3485, -71.1010, 8, 'CCS1104')"><em>Lattice QCD &mdash; and Beyond</em>, Boston University Center for Computational Science Seminar, 29 April 2011</a></td>
@@ -1134,7 +1219,7 @@
   </tr><tr>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(42.3485, -71.1011, 8, 'BUseminar')"><em>Exploring the Origin of Mass with High-Performance Computing</em>, Boston University, 10 December 2010</a></td>
     <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(42.3598, -71.0909, 8, 'MIT2010')"><em>Lattice Strong Dynamics for Electroweak Symmetry Breaking</em>, MIT Lattice Club, 20 October 2010</a></td>
-    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(39.1233, 9.5232, 8, 'Lattice10')"><em>Flavor dependence of the S parameter in SU(3) gauge theory</em> (for the LSD Collaboration), Lattice 2010, Villasimius, Italy, 17 June 2010</a></td>
+    <td><img src="marker.png" alt="talk" height=20><a onclick="initialize(39.1233, 9.5232, 8, 'Lattice10')"><em>Flavor dependence of the S parameter in SU(3) gauge theory</em> (for the LSD Collaboration), Lattice 2010, Villasimius, 17 June 2010</a></td>
   </tr><tr>
     <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(38.9135, -77.0349, 8, 'IGERT')"><em>Lattice Strong Dynamics: Using high-performance computing to explore the mystery of mass</em>, National Science Foundation IGERT Project Meeting, Washington DC, 24 May 2010</a></td>
     <td><img src="poster_marker.png" alt="poster" height=20><a onclick="initialize(42.3512, -71.1088, 8, 'BUsymposium')"><em>Lattice Strong Dynamics: Using high-performance computing to explore electroweak symmetry breaking</em>, Boston University Science and Engineering Research Symposium, 30 March 2010</a></td>
@@ -1151,7 +1236,7 @@
 
 <br><hr>
 
-<p class="left">Last modified 7 January 2022</p>
+<p class="left">Last modified 22 September 2023</p>
 
 <p class="right">
   <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html5.gif" alt="Valid HTML 5!"></a>

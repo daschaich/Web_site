@@ -50,7 +50,10 @@
 \usepackage{cancel}
 \newcommand{\Sb}{\ensuremath{\cancel{S^4}} }
 \newcommand{\TODO}[1]{\textcolor{red}{\textbf{#1}}}
-% Require packages color and [normalem]ulem
+
+% Revision markup
+%\usepackage{color}
+%\usepackage[normalem]{ulem}
 %\newcommand{\add}[1]{\textcolor{blue}{\uwave{#1}}}
 %\newcommand{\rem}[1]{\textcolor{red}{\sout{#1}}}
 
@@ -58,9 +61,10 @@
 \newcommand{\order}[1]{\ensuremath{\mathcal O\left( #1 \right)} }
 \newcommand{\smallfrac}[2]{\ensuremath{{\scriptstyle \frac{#1}{#2}}} }
 \newcommand{\half}{\smallfrac{1}{2}}
-\newcommand{\deriv}[2]{\ensuremath{\frac{d #1}{d #2}} }
-\newcommand{\dderiv}[2]{\ensuremath{\frac{d^2 #1}{d #2^2}} }
-\newcommand{\mixeddderiv}[3]{\ensuremath{\frac{d^2 #1}{d #2d #3}} }
+\newcommand{\drm}{\ensuremath{\mathrm{d}} }
+\newcommand{\deriv}[2]{\ensuremath{\frac{\drm #1}{\drm #2}} }
+\newcommand{\dderiv}[2]{\ensuremath{\frac{\drm^2 #1}{\drm #2^2}} }
+\newcommand{\mixeddderiv}[3]{\ensuremath{\frac{\drm^2 #1}{\drm #2\drm #3}} }
 \newcommand{\pderiv}[2]{\ensuremath{\frac{\partial #1}{\partial #2}} }
 \newcommand{\ppderiv}[2]{\ensuremath{\frac{\partial^2 #1}{\partial #2^2}} }
 \newcommand{\mixedppderiv}[3]{\ensuremath{\frac{\partial^2 #1}{\partial #2\partial #3}} }
